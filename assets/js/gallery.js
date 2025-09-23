@@ -1,0 +1,1 @@
+// Aquí podríamos inicializar PhotoSwipe/Lightbox si se añade en el futuro.

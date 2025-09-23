@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarifas · Casa Rural</title>
+  <meta name="description" content="Casa rural en Luna (León). Naturaleza, descanso y escapadas.">
+  <meta property="og:title" content="Tarifas · Casa Rural">
+  <meta property="og:description" content="Casa rural en Luna (León). Naturaleza, descanso y escapadas.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/img/favicon.ico">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Casa Rural</a>
+      <nav>
+        <a class="nav-link " href="index.html">Inicio</a>
+        <a class="nav-link " href="casa.html">La casa</a>
+        <a class="nav-link " href="historia.html">Historia</a>
+        <a class="nav-link " href="entorno.html">Entorno</a>
+        <a class="nav-link active" href="tarifas.html">Tarifas</a>
+        <a class="nav-link btn" href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  
+<main class="container section">
+  <h1>Tarifas</h1>
+  <p>Por ahora aplicamos un precio fijo estimado para fin de semana (viernes a domingo): <strong>450 €</strong>. Más adelante añadiremos tarifas detalladas por temporada.</p>
+  <div class="booking">
+    <label for="fecha">Selecciona tus fechas</label>
+    <input id="fecha" type="text" placeholder="Rango de fechas" />
+    <div class="price">
+      <span>Total estimado:</span>
+      <strong id="precioTotal">—</strong>
+    </div>
+    <a class="btn primary" href="contacto.html">Solicitar reserva</a>
+  </div>
+</main>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="assets/js/tarifas.js"></script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Casa Rural. Todos los derechos reservados.</p>
+      <p class="fine">Aviso legal · Privacidad · Cookies</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
