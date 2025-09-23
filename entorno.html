@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="assets/img/favicon.ico">
 </head>
@@ -30,19 +31,36 @@
     </div>
   </header>
   
-<main class="container section">
-  <h1>Entorno y actividades</h1>
-  <p>Rutas, miradores, embalse y otros planes. Añade aquí ideas y recomendaciones.</p>
-  <div class="gallery grid-3">
-    <img src="assets/img/placeholder.jpg" alt="Paisaje cerca de la casa" loading="lazy">
-    <img src="assets/img/placeholder.jpg" alt="Ruta por el sabinar" loading="lazy">
-    <img src="assets/img/placeholder.jpg" alt="Atardecer en el embalse" loading="lazy">
-  </div>
-</main>
+  <main class="container section">
+    <h1>Entorno y actividades</h1>
+    <p>Rutas, miradores, embalse y pueblos con encanto para una escapada completa.</p>
+
+    <div class="gallery grid-3" id="galeria-entorno">
+      <a href="assets/img/paisaje-1.jpeg" data-pswp-width="1600" data-pswp-height="900">
+        <img src="assets/img/paisaje-1.jpeg" alt="Vistas al embalse de Luna" loading="lazy">
+      </a>
+      <a href="assets/img/paisaje-2.jpeg" data-pswp-width="1600" data-pswp-height="900">
+        <img src="assets/img/paisaje-2.jpeg" alt="Atardecer en la montaña" loading="lazy">
+      </a>
+      <a href="assets/img/paisaje-3.jpeg" data-pswp-width="1600" data-pswp-height="900">
+        <img src="assets/img/exterior-1.jpg" alt="Fachada de piedra típica de la zona" loading="lazy">
+      </a>
+    </div>
+  </main>
+
+  <script type="module">
+  import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
+  const lightbox2 = new PhotoSwipeLightbox({
+    gallery: '#galeria-entorno',
+    children: 'a',
+    pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.esm.min.js')
+  });
+  lightbox2.init();
+  </script>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Casa Rural. Todos los derechos reservados.</p>
+      <p>© 2025 Casa Rural Carmen Luna. Todos los derechos reservados.</p>
       <p class="fine">Aviso legal · Privacidad · Cookies</p>
     </div>
   </footer>

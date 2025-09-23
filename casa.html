@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="assets/img/favicon.ico">
 </head>
@@ -32,17 +33,46 @@
   
 <main class="container section">
   <h1>La casa</h1>
-  <p>Texto de ejemplo: describe habitaciones, equipamiento y detalles. Reemplaza este texto por el definitivo.</p>
-  <div class="gallery grid-3">
-    <img src="assets/img/placeholder.jpg" alt="Vista exterior de la casa" loading="lazy">
-    <img src="assets/img/placeholder.jpg" alt="Salón con chimenea" loading="lazy">
-    <img src="assets/img/placeholder.jpg" alt="Habitación principal" loading="lazy">
+  <p>Habitaciones acogedoras, cocina completa y salón con chimenea. Jardín y barbacoa para disfrutar al aire libre.</p>
+
+  <div class="gallery grid-3" id="galeria-casa">
+    <a href="assets/img/salon1.jpeg" data-pswp-width="1600" data-pswp-height="900">
+      <img src="assets/img/Salon-1.jpeg" alt="Salón con chimenea" loading="lazy">
+    </a>
+    <a href="assets/img/cocina1.jpeg" data-pswp-width="1600" data-pswp-height="900">
+      <img src="assets/img/Cocina-1.jpeg" alt="Cocina completamente equipada" loading="lazy">
+    </a>
+    <a href="assets/img/habitacion1.jpeg" data-pswp-width="1600" data-pswp-height="900">
+      <img src="assets/img/habitacion-1.jpeg" alt="Habitación principal con luz natural" loading="lazy">
+    </a>
+    <a href="assets/img/habitacion2.jpeg" data-pswp-width="1600" data-pswp-height="900">
+      <img src="assets/img/habitacion-2.jpeg" alt="Segunda habitación con dos camas" loading="lazy">
+    </a>
+    <a href="assets/img/bano1.jpeg" data-pswp-width="1200" data-pswp-height="1600">
+      <img src="assets/img/bano-1.jpeg" alt="Baño reformado con ducha" loading="lazy">
+    </a>
+    <a href="assets/img/jardin.jpeg" data-pswp-width="1600" data-pswp-height="900">
+      <img src="assets/img/jardin.jpeg" alt="Jardín con zona de tumbonas" loading="lazy">
+    </a>
+    <a href="assets/img/barbacoa.jpeg" data-pswp-width="1600" data-pswp-height="900">
+      <img src="assets/img/barbacoa.jpeg" alt="Barbacoa exterior de piedra" loading="lazy">
+    </a>
   </div>
 </main>
 
+<script type="module">
+import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
+const lightbox = new PhotoSwipeLightbox({
+  gallery: '#galeria-casa',
+  children: 'a',
+  pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.esm.min.js')
+});
+lightbox.init();
+</script>
+
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Casa Rural. Todos los derechos reservados.</p>
+      <p>© 2025 Casa Rural Carmen Luna. Todos los derechos reservados.</p>
       <p class="fine">Aviso legal · Privacidad · Cookies</p>
     </div>
   </footer>
