@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Historia · Casa Rural</title>
-  <meta name="description" content="Casa rural en Luna (León). Naturaleza, descanso y escapadas.">
-  <meta property="og:title" content="Historia · Casa Rural">
-  <meta property="og:description" content="Casa rural en Luna (León). Naturaleza, descanso y escapadas.">
+  <title>Historia · Casa Rural Carmen Luna</title>
+  <meta name="description" content="Miñera de Luna: tesón y memoria de un pueblo ligado al embalse de Luna (1951–1956). Hoy, naturaleza viva en la Reserva de la Biosfera de Omaña y Luna.">
+  <meta property="og:title" content="Historia · Casa Rural Carmen Luna">
+  <meta property="og:description" content="El pasado y presente de Miñera de Luna: de Las Juncarinas al mirador sobre el embalse, entre robledales y sabinares.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="assets/img/favicon.ico">
 </head>
@@ -20,24 +21,110 @@
     <div class="container nav">
       <a class="brand" href="index.html">Casa Rural</a>
       <nav>
-        <a class="nav-link " href="index.html">Inicio</a>
-        <a class="nav-link " href="casa.html">La casa</a>
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="casa.html">La casa</a>
         <a class="nav-link active" href="historia.html">Historia</a>
-        <a class="nav-link " href="entorno.html">Entorno</a>
-        <a class="nav-link " href="tarifas.html">Tarifas</a>
+        <a class="nav-link" href="entorno.html">Entorno</a>
+        <a class="nav-link" href="tarifas.html">Tarifas</a>
         <a class="nav-link btn" href="contacto.html">Contacto</a>
       </nav>
     </div>
   </header>
-  
-<main class="container section">
-  <h1>Historia</h1>
-  <p>Aquí contaremos la historia de la casa, del pueblo y del embalse. Añade anécdotas y contexto.</p>
-</main>
+
+  <main class="container section">
+    <h1>Historia de Miñera de Luna</h1>
+    <p><strong>Casa Rural Carmen Luna</strong> se asienta en plena <strong>Reserva de la Biosfera de Omaña y Luna</strong>, en el precioso pueblo de <strong>Miñera de Luna</strong>, rodeado por el robledal de la Mata y los pintorescos <strong>sabinares de Luna</strong>. A sus pies, el <strong>embalse de Luna</strong> de singular belleza marca la identidad del valle y su memoria colectiva.</p>
+    <p><strong>Miñera</strong> representa el tesón de algunos vecinos que, heroicamente, mantienen vivo el recuerdo y la existencia de un pueblo <strong>sepultado por las aguas entre 1951 y 1956</strong>. El pueblo actual se encuentra enclavado en el paraje que originariamente se denominaba <em>“Las Juncarinas”</em>.</p>
+
+    <!-- CRONOLOGÍA -->
+    <section class="section" aria-labelledby="cronologia">
+      <h2 id="cronologia">Cronología del embalse de Luna</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>1951</h3>
+          <p>Comienza el periodo que llevaría a la <strong>inundación del antiguo Miñera</strong> con la creación del embalse de Luna.</p>
+        </div>
+        <div class="card">
+          <h3>1951–1956</h3>
+          <p>Traslados, nuevas ubicaciones y adaptación de la vida del valle. Nace el asentamiento en <strong>Las Juncarinas</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Desde 1956</h3>
+          <p>El <strong>nuevo Miñera de Luna</strong> crece junto al embalse, manteniendo viva su memoria y su cultura rural.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIÑERA HOY -->
+    <section class="section" aria-labelledby="minera-hoy">
+      <h2 id="minera-hoy">Miñera hoy</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Un paisaje único</h3>
+          <p>El embalse ofrece <strong>pesca, deportes náuticos, baño y senderismo</strong>. El entorno está arropado por robledales y sabinares que perfuman cada estación.</p>
+        </div>
+        <div class="card">
+          <h3>Miradores cercanos</h3>
+          <p>En <strong>Barrios de Luna</strong> (9 km), a los pies del muro del embalse, un mirador regala <strong>vistas emocionantes</strong> de toda la cuenca.</p>
+        </div>
+        <div class="card">
+          <h3>Bienestar y sabor</h3>
+          <p>El <strong>balneario de Caldas de Luna</strong> (9 km) invita al relax, y en <strong>Geras</strong> (17 km) la tradición continúa con <strong>embutidos</strong> y <strong>calderetas</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVA -->
+    <section class="section" aria-labelledby="reserva">
+      <h2 id="reserva">Reserva de la Biosfera de Omaña y Luna</h2>
+      <p>Formar parte de esta Reserva significa convivir con un patrimonio natural excepcional: <strong>vistas al lago y la montaña</strong>, cielos limpios y una biodiversidad que se descubre en cada paseo. En la casa encontrarás <strong>mapas del parque</strong>, <strong>rutas señalizadas</strong> y <strong>recomendaciones</strong> según la época del año.</p>
+      <p class="fine">¿Te apetece explorar? Empieza por nuestras <a class="more" href="entorno.html#rutas">rutas recomendadas</a> o descubre las <a class="more" href="entorno.html#embalse">actividades del embalse</a>.</p>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section" aria-labelledby="galeria-historia">
+      <h2 id="galeria-historia">Galería</h2>
+      <div class="gallery grid-3" id="galeria-historia-grid">
+        <a href="assets/img//paisaje-3.jpeg" data-pswp-width="1600" data-pswp-height="900">
+          <img src="assets/img//paisaje-3.jpeg" alt="Arquitectura de piedra típica en el valle de Luna" loading="lazy">
+        </a>
+        <a href="assets/img/paisaje-1.jpeg" data-pswp-width="1600" data-pswp-height="900">
+          <img src="assets/img/paisaje-1.jpeg" alt="Vista del embalse de Luna junto a Miñera" loading="lazy">
+        </a>
+        <a href="assets/img/paisaje-2.jpeg" data-pswp-width="1600" data-pswp-height="900">
+          <img src="assets/img/paisaje-2.jpeg" alt="Atardecer sobre el agua y las montañas" loading="lazy">
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="card" style="display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+        <div>
+          <h2 style="margin:0 0 .3rem">Ven a vivir la historia</h2>
+          <p style="margin:0">Descansa en nuestra casa de piedra con mirador al embalse y descubre Miñera de Luna.</p>
+        </div>
+        <div style="display:flex; gap:12px">
+          <a class="btn primary" href="casa.html">Ver la casa</a>
+          <a class="btn ghost" href="tarifas.html">Ver tarifas</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module">
+    import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '#galeria-historia-grid',
+      children: 'a',
+      pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.esm.min.js')
+    });
+    lightbox.init();
+  </script>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Casa Rural. Todos los derechos reservados.</p>
+      <p>© 2025 Casa Rural Carmen Luna. Todos los derechos reservados.</p>
       <p class="fine">Aviso legal · Privacidad · Cookies</p>
     </div>
   </footer>

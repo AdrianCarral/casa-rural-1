@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tarifas · Casa Rural</title>
-  <meta name="description" content="Casa rural en Luna (León). Naturaleza, descanso y escapadas.">
-  <meta property="og:title" content="Tarifas · Casa Rural">
-  <meta property="og:description" content="Casa rural en Luna (León). Naturaleza, descanso y escapadas.">
+  <title>Tarifas y disponibilidad · Casa Rural Carmen Luna</title>
+  <meta name="description" content="Consulta disponibilidad y precios de Casa Rural Carmen Luna en Miñera de Luna. 3 dormitorios (7 plazas), 3 baños, mirador al embalse, jardín con barbacoa, WiFi y parking.">
+  <meta property="og:title" content="Tarifas y disponibilidad · Casa Rural Carmen Luna">
+  <meta property="og:description" content="Reserva directa con el alojamiento. Te confirmamos precio según fechas, nº de personas y noches.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,36 +20,167 @@
     <div class="container nav">
       <a class="brand" href="index.html">Casa Rural</a>
       <nav>
-        <a class="nav-link " href="index.html">Inicio</a>
-        <a class="nav-link " href="casa.html">La casa</a>
-        <a class="nav-link " href="historia.html">Historia</a>
-        <a class="nav-link " href="entorno.html">Entorno</a>
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="casa.html">La casa</a>
+        <a class="nav-link" href="historia.html">Historia</a>
+        <a class="nav-link" href="entorno.html">Entorno</a>
         <a class="nav-link active" href="tarifas.html">Tarifas</a>
         <a class="nav-link btn" href="contacto.html">Contacto</a>
       </nav>
     </div>
   </header>
-  
-<main class="container section">
-  <h1>Tarifas</h1>
-  <p>Por ahora aplicamos un precio fijo estimado para fin de semana (viernes a domingo): <strong>450 €</strong>. Más adelante añadiremos tarifas detalladas por temporada.</p>
-  <div class="booking">
-    <label for="fecha">Selecciona tus fechas</label>
-    <input id="fecha" type="text" placeholder="Rango de fechas" />
-    <div class="price">
-      <span>Total estimado:</span>
-      <strong id="precioTotal">—</strong>
-    </div>
-    <a class="btn primary" href="contacto.html">Solicitar reserva</a>
-  </div>
-</main>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="assets/js/tarifas.js"></script>
+
+  <main class="container section">
+    <h1>Tarifas y disponibilidad</h1>
+    <p>Trabajamos con <strong>reserva directa</strong>. El precio varía según <strong>fechas</strong>, <strong>número de personas</strong> y <strong>noches</strong>. Escríbenos y te confirmamos presupuesto al momento.</p>
+
+    <!-- BLOQUE TARIFAS ORIENTATIVAS/CTA -->
+    <section class="section" aria-labelledby="consulta">
+      <h2 id="consulta">Solicita tu presupuesto</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Escapada de fin de semana</h3>
+          <p>Perfecta para desconectar entre <strong>robledales</strong> y <strong>sabinares</strong>, con vistas al <strong>embalse de Luna</strong>.</p>
+          <div class="price">
+            <span>2–3 noches</span>
+            <strong>A consultar</strong>
+          </div>
+          <a class="btn primary" href="contacto.html">Pedir precio</a>
+        </div>
+        <div class="card">
+          <h3>Semana completa</h3>
+          <p>Para disfrutar con calma del entorno y las <strong>rutas de la Reserva</strong>.</p>
+          <div class="price">
+            <span>7 noches</span>
+            <strong>A consultar</strong>
+          </div>
+          <a class="btn primary" href="contacto.html">Consultar disponibilidad</a>
+        </div>
+        <div class="card">
+          <h3>Puentes y festivos</h3>
+          <p>Consúltanos condiciones específicas para fechas señaladas y grupos.</p>
+          <div class="price">
+            <span>Fechas especiales</span>
+            <strong>A consultar</strong>
+          </div>
+          <a class="btn primary" href="contacto.html">Solicitar oferta</a>
+        </div>
+      </div>
+      <p class="fine">Mejor precio garantizado en reserva directa. Respuesta rápida por WhatsApp, teléfono o email.</p>
+    </section>
+
+    <!-- QUÉ INCLUYE -->
+    <section class="section" aria-labelledby="incluye">
+      <h2 id="incluye">Qué incluye tu estancia</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>La casa</h3>
+          <ul>
+            <li><strong>3 dormitorios (7 plazas)</strong></li>
+            <li><strong>3 baños</strong> con ducha y secador</li>
+            <li><strong>110 m²</strong> en 2 plantas</li>
+            <li>Mirador con <strong>vistas al embalse</strong></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Equipamiento</h3>
+          <ul>
+            <li>WiFi gratis (zonas comunes)</li>
+            <li>TV pantalla plana · satélite</li>
+            <li>Juegos de mesa, libros y música para niños</li>
+            <li>Calefacción · <strong>prohibido fumar</strong></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Cocina completa</h3>
+          <ul>
+            <li>Lavavajillas, lavadora</li>
+            <li>Horno, microondas, <strong>inducción</strong></li>
+            <li><strong>Nespresso</strong> y cafetera eléctrica</li>
+            <li>Tostador, exprimidor, batidora, nevera</li>
+            <li>Menaje y mesa de comedor</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Exterior</h3>
+          <ul>
+            <li><strong>Jardín</strong> con muebles y comedor</li>
+            <li><strong>Barbacoa</strong> de piedra y cenador</li>
+            <li>Vistas a lago, montaña y jardín</li>
+            <li>Parking público <strong>gratuito</strong> cercano</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Ropa y toallas</h3>
+          <ul>
+            <li>Ropa de cama y toallas incluidas</li>
+            <li>Enchufes junto a la cama</li>
+            <li>Mosquiteras · suelos de madera/baldosa</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Información local</h3>
+          <ul>
+            <li>Mapas de rutas y guía del parque</li>
+            <li>Recomendaciones de <a class="more" href="entorno.html#restaurantes">restaurantes</a></li>
+            <li>Actividades en el <a class="more" href="entorno.html#embalse">embalse</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORARIOS Y DATOS PRÁCTICOS -->
+    <section class="section" aria-labelledby="horarios">
+      <h2 id="horarios">Horarios y datos prácticos</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Entrada</h3>
+          <p>De <strong>17:00</strong> a <strong>18:00</strong>.<br>Indícanos tu hora aproximada con antelación.</p>
+        </div>
+        <div class="card">
+          <h3>Salida</h3>
+          <p>De <strong>11:30</strong> a <strong>12:00</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Capacidad</h3>
+          <p><strong>7 plazas</strong> · 3 dormitorios (2 dobles + 1 triple).</p>
+        </div>
+        <div class="card">
+          <h3>Ubicación</h3>
+          <p><strong>Miñera de Luna</strong> · Reserva de la Biosfera de Omaña y Luna.<br>
+            León a <strong>50 km</strong> (AP-66 / CL-626), Oviedo a <strong>70 km</strong> (AP-66), Aeropuerto de León a <strong>63 km</strong>.
+          </p>
+          <p class="fine"><a class="more" href="contacto.html#como-llegar">Cómo llegar →</a></p>
+        </div>
+        <div class="card">
+          <h3>Conectividad</h3>
+          <p>WiFi gratis en zonas comunes. TV satélite. Cobertura móvil variable según operador.</p>
+        </div>
+        <div class="card">
+          <h3>Política de humo</h3>
+          <p><strong>Prohibido fumar</strong> en todo el alojamiento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section">
+      <div class="card" style="display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+        <div>
+          <h2 style="margin:0 0 .3rem">¿Fechas en mente?</h2>
+          <p style="margin:0">Dinos <strong>cuándo</strong> y <strong>cuántos sois</strong> y te enviamos precio y disponibilidad al momento.</p>
+        </div>
+        <div style="display:flex; gap:12px">
+          <a class="btn primary" href="contacto.html">Contactar ahora</a>
+          <a class="btn ghost" href="entorno.html">Ver entorno</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Casa Rural. Todos los derechos reservados.</p>
+      <p>© 2025 Casa Rural Carmen Luna. Todos los derechos reservados.</p>
       <p class="fine">Aviso legal · Privacidad · Cookies</p>
     </div>
   </footer>

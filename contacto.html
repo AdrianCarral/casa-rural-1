@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contacto · Casa Rural</title>
-  <meta name="description" content="Casa rural en Luna (León). Naturaleza, descanso y escapadas.">
-  <meta property="og:title" content="Contacto · Casa Rural">
-  <meta property="og:description" content="Casa rural en Luna (León). Naturaleza, descanso y escapadas.">
+  <title>Contacto · Casa Rural Carmen Luna</title>
+  <meta name="description" content="Contacto directo con Casa Rural Carmen Luna en Miñera de Luna. Consulta disponibilidad, tarifas y cómo llegar (AP-66 / CL-626).">
+  <meta property="og:title" content="Contacto · Casa Rural Carmen Luna">
+  <meta property="og:description" content="Escríbenos para reservar o resolver dudas. A 50 km de León y 70 km de Oviedo. Aeropuerto de León a 63 km.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,30 +20,131 @@
     <div class="container nav">
       <a class="brand" href="index.html">Casa Rural</a>
       <nav>
-        <a class="nav-link " href="index.html">Inicio</a>
-        <a class="nav-link " href="casa.html">La casa</a>
-        <a class="nav-link " href="historia.html">Historia</a>
-        <a class="nav-link " href="entorno.html">Entorno</a>
-        <a class="nav-link " href="tarifas.html">Tarifas</a>
-        <a class="nav-link btn" href="contacto.html">Contacto</a>
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="casa.html">La casa</a>
+        <a class="nav-link" href="historia.html">Historia</a>
+        <a class="nav-link" href="entorno.html">Entorno</a>
+        <a class="nav-link" href="tarifas.html">Tarifas</a>
+        <a class="nav-link btn active" href="contacto.html">Contacto</a>
       </nav>
     </div>
   </header>
   
-<main class="container section">
-  <h1>Contacto</h1>
-  <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="contacto">
-    <p style="display:none"><label>Si eres humano, deja esto vacío: <input name="bot-field"></label></p>
+  <main class="container section">
+    <h1>Contacto</h1>
+    <p>Cuéntanos tus fechas y cuántos sois. Te confirmamos <strong>disponibilidad y precio</strong> al momento.</p>
 
-    <label>Nombre<input type="text" name="nombre" required></label>
-    <label>Email<input type="email" name="email" required></label>
-    <label>Teléfono<input type="tel" name="telefono"></label>
-    <label>Mensaje<textarea name="mensaje" rows="5" required></textarea></label>
-    <button class="btn primary" type="submit">Enviar</button>
-  </form>
-  <p class="fine">También puedes escribirnos por WhatsApp o llamar directamente.</p>
-</main>
+    <div class="grid-3">
+      <!-- FORMULARIO -->
+      <div class="card" style="grid-column: span 2;">
+        <h2 style="margin-top:0">Escríbenos</h2>
+        <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="booking">
+          <input type="hidden" name="form-name" value="contacto">
+          <p style="display:none"><label>Si eres humano, deja esto vacío: <input name="bot-field"></label></p>
+
+          <label>Nombre
+            <input type="text" name="nombre" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+          <label>Teléfono
+            <input type="tel" name="telefono" inputmode="tel" placeholder="">
+          </label>
+
+          <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:12px">
+            <label>Fecha de entrada
+              <input type="date" name="fecha_entrada">
+            </label>
+            <label>Fecha de salida
+              <input type="date" name="fecha_salida">
+            </label>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px">
+            <label>Adultos
+              <input type="number" name="adultos" min="1" max="7" placeholder="2">
+            </label>
+            <label>Niños
+              <input type="number" name="ninos" min="0" max="6" placeholder="0">
+            </label>
+            <label>Motivo
+              <select name="motivo">
+                <option value="">Selecciona…</option>
+                <option>Escapada fin de semana</option>
+                <option>Semana completa</option>
+                <option>Puente / festivo</option>
+                <option>Otro</option>
+              </select>
+            </label>
+          </div>
+
+          <label>Mensaje
+            <textarea name="mensaje" rows="5" placeholder="Cuéntanos cualquier detalle (horarios, mascotas, cunas, etc.)" required></textarea>
+          </label>
+
+          <button class="btn primary" type="submit">Enviar</button>
+          <p class="fine">También atendemos por WhatsApp, teléfono o email (te lo facilitamos al responder).</p>
+        </form>
+      </div>
+
+      <!-- DATOS PRÁCTICOS -->
+      <div class="card">
+        <h2 style="margin-top:0">Datos prácticos</h2>
+        <ul>
+          <li><strong>Capacidad:</strong> 7 plazas (3 dormitorios: 2 dobles + 1 triple)</li>
+          <li><strong>Baños:</strong> 3 con ducha y secador</li>
+          <li><strong>WiFi:</strong> gratis en zonas comunes</li>
+          <li><strong>Parking:</strong> público gratuito cercano (sin reserva)</li>
+          <li><strong>Check-in:</strong> 17:00–18:00 · <strong>Check-out:</strong> 11:30–12:00</li>
+          <li><strong>Política de humo:</strong> prohibido fumar</li>
+        </ul>
+        <p class="fine">Te enviaremos la guía de bienvenida con rutas, restaurantes y recomendaciones.</p>
+      </div>
+    </div>
+
+    <!-- CÓMO LLEGAR -->
+    <section class="section" id="como-llegar" aria-labelledby="como-llegar-title">
+      <h2 id="como-llegar-title">Cómo llegar</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Desde León</h3>
+          <p><strong>50 km</strong> por <strong>AP-66</strong> o <strong>CL-626</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Desde Oviedo</h3>
+          <p><strong>70 km</strong> por <strong>AP-66</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Aeropuerto</h3>
+          <p><strong>Aeropuerto de León</strong> a <strong>63 km</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Puntos cercanos</h3>
+          <ul>
+            <li><strong>Barrios de Luna</strong> · 9 km (mirador del embalse)</li>
+            <li><strong>Caldas de Luna</strong> · 9 km (balneario)</li>
+            <li><strong>Geras</strong> · 17 km (embutidos y calderetas)</li>
+          </ul>
+        </div>
+      </div>
+      <p class="fine">Destino: <strong>Miñera de Luna</strong> (Reserva de la Biosfera de Omaña y Luna). Te compartimos la ubicación exacta antes de la llegada.</p>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section">
+      <div class="card" style="display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+        <div>
+          <h2 style="margin:0 0 .3rem">¿Listo para tu escapada?</h2>
+          <p style="margin:0">Mándanos tus fechas y te confirmamos disponibilidad y precio.</p>
+        </div>
+        <div style="display:flex; gap:12px">
+          <a class="btn primary" href="tarifas.html">Ver tarifas</a>
+          <a class="btn ghost" href="entorno.html">Ver entorno</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container">
