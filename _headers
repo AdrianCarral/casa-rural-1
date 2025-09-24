@@ -9,8 +9,8 @@
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     font-src  'self' https://fonts.gstatic.com;
     script-src 'self' https://cdn.jsdelivr.net;
-    frame-src 'self' https://www.google.com https://calendar.google.com https://*.google.com https://*.gstatic.com;
-    child-src 'self' https://www.google.com https://calendar.google.com https://*.google.com https://*.gstatic.com;
+    frame-src https://calendar.google.com https://www.google.com https://*.google.com https://*.gstatic.com;
+    child-src https://calendar.google.com https://www.google.com https://*.google.com https://*.gstatic.com;
     connect-src 'self';
     base-uri 'self';
     form-action 'self';
