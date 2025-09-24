@@ -401,3 +401,67 @@ body{
 @media (max-width:420px){
   .calendar-embed{ height:460px !important; }
 }
+/* ==== CABECERA MÓVIL: 1 fila, sin solapes, scroll horizontal cómodo ==== */
+@supports(padding: max(0px)) {
+  .site-header { padding-top: env(safe-area-inset-top); }
+}
+
+@media (max-width: 760px){
+  /* Header compacto */
+  .site-header{
+    backdrop-filter:saturate(160%) blur(10px);
+    background:rgba(255,255,255,.92);
+    border-bottom:1px solid #ece8e1;
+  }
+  .nav{
+    height:60px;                /* era 78px */
+    padding:8px var(--space);
+    gap:8px;
+  }
+
+  /* Marca en una sola línea (no partir “Casa Rural”) */
+  .brand{
+    white-space:nowrap;
+    font-size:1.05rem;
+    line-height:1;
+    margin-right:6px;
+  }
+
+  /* Menú: una sola fila desplazable, sin envolver */
+  .nav > nav{
+    display:flex;
+    flex-wrap:nowrap;           /* ¡clave! no hacer 2 filas */
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    gap:6px;
+    scroll-snap-type:x proximity;
+  }
+  .nav > nav::-webkit-scrollbar{ display:none; } /* ocultar scrollbar iOS */
+
+  /* Pills más contenidos (44px de alto accesible) */
+  .nav-link,
+  .nav .btn{
+    flex:0 0 auto;
+    scroll-snap-align:center;
+    min-height:44px;
+    padding:10px 12px;          /* antes más ancho */
+    border-radius:14px;
+    font-size:15px;
+    line-height:1;
+  }
+
+  /* Quitamos el efecto “pulse” para que no invada otros pills */
+  .nav .btn::after{ display:none; }
+
+  /* Activo/hover más limpio, sin sombra grande */
+  .nav-link.active{
+    background:rgba(40,74,63,.14);
+    border:1px solid rgba(40,74,63,.22);
+    box-shadow:none;
+    color:var(--pine);
+  }
+  .nav-link:hover{ background:rgba(40,74,63,.10); }
+
+  /* Evitar que la cabecera tape el inicio del contenido en anclas */
+  :target{ scroll-margin-top: 70px; }
+}
