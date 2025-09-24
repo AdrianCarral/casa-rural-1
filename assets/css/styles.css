@@ -351,3 +351,53 @@ body{
   .nav{ padding:8px 0; gap:6px }
   .nav-link, .nav .btn{ font-size:16px; }
 }
+
+/* =================== Mobile polish: más aire y legibilidad =================== */
+@media (max-width: 768px){
+  /* Contenedor y tipografía */
+  .container{ padding:0 calc(var(--space) * .9); }
+  h1{ font-size:clamp(26px, 7vw, 34px); }
+  h2{ font-size:clamp(20px, 5.6vw, 26px); }
+  .section{ padding:28px 0 40px; }
+
+  /* Menú: que no se corte y sea cómodo de usar */
+  nav{ overflow-x:auto; -webkit-overflow-scrolling:touch; gap:6px; padding-bottom:6px; }
+  .nav-link, .nav .btn{ flex:0 0 auto; padding:12px 14px; font-size:16px; min-height:46px; border-radius:16px; }
+
+  /* Hero menos alto y panel a todo ancho */
+  .hero .hero-inner{ padding:42px 0 28px; min-height:auto; }
+  .hero-panel{ max-width:100%; padding:16px; }
+
+  /* Rejillas: una sola columna y más separación */
+  .grid-3{ grid-template-columns:1fr; gap: calc(var(--space) * 1.15); }
+
+  /* Tarjetas con más aire */
+  .card{ padding:16px; border-radius:16px; }
+
+  /* Galería más baja para que respiren las fotos */
+  .gallery img{ height: 180px; }
+
+  /* Formularios cómodos y botones grandes */
+  .booking{ max-width:none; }
+  .card .btn{ width:100%; } /* hace los botones de tarjetas y CTAs a todo el ancho */
+  
+  /* Si algún elemento usa "grid-column: span 2" (como el formulario), forzamos 1 col en móvil */
+  .grid-3 > [style*="span 2"]{ grid-column: auto !important; }
+
+  /* Bloques de CTA en fila responsiva */
+  .cta-row{ display:flex; gap:10px; }
+  .cta-row .btn{ flex:1; }
+}
+
+/* Un pelín más de aire aún en móviles muy pequeños */
+@media (max-width: 420px){
+  .container{ padding:0 calc(var(--space) * .7); }
+  .gallery img{ height: 170px; }
+}
+
+@media (max-width:768px){
+  .calendar-embed{ height:520px !important; }
+}
+@media (max-width:420px){
+  .calendar-embed{ height:460px !important; }
+}
