@@ -32,7 +32,38 @@
 
   <main class="container section">
     <h1>Tarifas y disponibilidad</h1>
-    <p>Trabajamos con <strong>reserva directa</strong>. El precio varía según <strong>fechas</strong>, <strong>número de personas</strong> y <strong>noches</strong>. Escríbenos y te confirmamos presupuesto al momento.</p>
+    <p>Trabajamos con <strong>reserva directa</strong>. Estas son las <strong>tarifas base</strong> para 2025; ajustamos el presupuesto final según <strong>fechas</strong>, <strong>número de personas</strong> y <strong>servicios adicionales</strong>. Escríbenos y te confirmamos al momento.</p>
+
+    <section class="section" aria-labelledby="tarifas-base">
+      <h2 id="tarifas-base">Tarifas base 2025</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Fin de semana completo</h3>
+          <div class="price">
+            <span>Viernes a domingo</span>
+            <strong>400&nbsp;€</strong>
+          </div>
+          <p>Incluye dos noches. Aplicable también a <strong>puentes nacionales</strong>, <strong>Navidad</strong> y <strong>Semana Santa</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Entre semana</h3>
+          <div class="price">
+            <span>De domingo a jueves</span>
+            <strong>150&nbsp;€/noche</strong>
+          </div>
+          <p>Ideal para teletrabajar con vistas al embalse o escaparte entre semana.</p>
+        </div>
+        <div class="card">
+          <h3>Noches extra</h3>
+          <div class="price">
+            <span>Sobre estancias de fin de semana</span>
+            <strong>+150&nbsp;€/noche</strong>
+          </div>
+          <p>Amplía tu escapada (ej. jueves–domingo o viernes–lunes) con tarifa nocturna estándar.</p>
+        </div>
+      </div>
+      <p class="fine">Precios con IVA incluido. Depósito de seguridad y limpieza final incluidos en reservas estándar.</p>
+    </section>
 
     <!-- BLOQUE TARIFAS ORIENTATIVAS/CTA -->
     <section class="section" aria-labelledby="consulta">
@@ -40,10 +71,10 @@
       <div class="grid-3">
         <div class="card">
           <h3>Escapada de fin de semana</h3>
-          <p>Perfecta para desconectar entre <strong>robledales</strong> y <strong>sabinares</strong>, con vistas al <strong>embalse de Luna</strong>.</p>
+          <p>Dos noches con <strong>hall mirador</strong>, <strong>chimenea</strong> y vistas al <strong>embalse de Luna</strong>.</p>
           <div class="price">
-            <span>2–3 noches</span>
-            <strong>A consultar</strong>
+            <span>Viernes–domingo</span>
+            <strong>400&nbsp;€</strong>
           </div>
           <a class="btn primary" href="contacto.html">Pedir precio</a>
         </div>
@@ -58,10 +89,10 @@
         </div>
         <div class="card">
           <h3>Puentes y festivos</h3>
-          <p>Consúltanos condiciones específicas para fechas señaladas y grupos.</p>
+          <p><strong>Tarifa fin de semana</strong> aplicable a todos los festivos nacionales, Navidad y Semana Santa.</p>
           <div class="price">
-            <span>Fechas especiales</span>
-            <strong>A consultar</strong>
+            <span>Precio base</span>
+            <strong>400&nbsp;€</strong>
           </div>
           <a class="btn primary" href="contacto.html">Solicitar oferta</a>
         </div>
@@ -69,9 +100,30 @@
       <p class="fine">Mejor precio garantizado en reserva directa. Respuesta rápida por WhatsApp, teléfono o email.</p>
     </section>
 
+    <section class="section" aria-labelledby="calculadora">
+      <h2 id="calculadora">Calculadora orientativa</h2>
+      <div class="card" style="max-width:640px">
+        <form id="calc-form" class="booking" novalidate>
+          <div style="display:grid; gap:12px; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));">
+            <label>Tipo de estancia
+              <select name="tipo" required>
+                <option value="finSemana">Fin de semana / Puente / Navidad / Semana Santa</option>
+                <option value="entreSemana">Entre semana</option>
+              </select>
+            </label>
+            <label>Noches
+              <input type="number" name="noches" min="1" max="14" value="2" required>
+            </label>
+          </div>
+          <p style="margin:12px 0 0">Precio estimado: <strong id="calc-total">400&nbsp;€</strong></p>
+          <p class="fine" style="margin:4px 0 0">Cálculo orientativo. Confirma siempre disponibilidad, número de huéspedes y condiciones especiales (mascotas, eventos, etc.).</p>
+        </form>
+      </div>
+    </section>
+
     <section class="section" id="disponibilidad" aria-labelledby="disponibilidad-title">
       <h2 id="disponibilidad-title">Calendario de disponibilidad</h2>
-      <p>Consulta aquí las fechas ocupadas. Para reservar, escríbenos desde <a class="more" href="contacto.html">Contacto</a>.</p>
+      <p>Consulta aquí las fechas ocupadas. El calendario es solo informativo; para reservar, escríbenos desde <a class="more" href="contacto.html">Contacto</a>.</p>
 
       <div class="card">
         <iframe
@@ -145,5 +197,6 @@
     </div>
   </footer>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/tarifas.js"></script>
 </body>
 </html>
