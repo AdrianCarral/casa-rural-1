@@ -122,6 +122,80 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #bcd; outline-offset:2px}
 .hero p{max-width:62ch; margin:0 0 .8rem}
 .hero-ctas{display:flex; gap:12px}
 
+/* =Hero secundario para páginas interiores */
+.page-hero{
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  padding:clamp(120px, 26vw, 240px) 0 clamp(68px, 14vw, 140px);
+  color:#f5f3ee;
+  overflow:hidden;
+  margin-bottom:clamp(32px, 8vw, 80px);
+}
+.page-hero::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background-image:var(--hero-bg);
+  background-size:cover;
+  background-position:center;
+  filter:saturate(1.1);
+  z-index:0;
+}
+.page-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg, rgba(15,31,27,.85) 0%, rgba(15,31,27,.62) 55%, rgba(15,31,27,.45) 100%);
+  z-index:0;
+}
+.page-hero .container{
+  position:relative;
+  z-index:1;
+  max-width:min(760px, 92%);
+}
+.page-hero h1{margin-bottom:1.1rem; font-size:clamp(32px, 5vw, 52px);}
+.page-hero p{color:color-mix(in srgb, #ffffff 88%, transparent); max-width:68ch; margin-bottom:1rem;}
+
+/* =Secciones con imagen de fondo integrada */
+.section.scenic{
+  position:relative;
+  color:#f5f3ee;
+  overflow:hidden;
+}
+.section.scenic::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:
+    linear-gradient(135deg, rgba(16,32,27,.82), rgba(16,32,27,.58)),
+    var(--section-bg);
+  background-size:cover;
+  background-position:center;
+  filter:saturate(1.05);
+  z-index:0;
+}
+.section.scenic > .container{
+  position:relative;
+  z-index:1;
+}
+.section.scenic h2{color:inherit;}
+.section.scenic p,
+.section.scenic li,
+.section.scenic .fine{color:color-mix(in srgb, #ffffff 84%, transparent);}
+.section.scenic a{color:color-mix(in srgb, #ffffff 92%, var(--cream) 8%);}
+.section.scenic .card{
+  background:rgba(255,255,255,.14);
+  border-color:rgba(255,255,255,.32);
+  box-shadow:0 24px 48px rgba(0,0,0,.28);
+  color:#fff;
+  backdrop-filter:blur(4px);
+}
+.section.scenic .card h3{color:#fff;}
+.section.scenic .card p,
+.section.scenic .card li{color:color-mix(in srgb, #ffffff 88%, transparent);}
+.section.scenic .card .fine{color:color-mix(in srgb, #ffffff 72%, transparent);}
+
 /* =Secciones, tarjetas y rejillas */
 .section{padding:38px 0 56px}
 .section.alt{background:var(--g-cream)}
