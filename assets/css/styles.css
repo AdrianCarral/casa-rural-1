@@ -148,6 +148,10 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #bcd; outline-offset:2px}
 }
 
 /* =Galería */
+#galeria-casa{display:flex; flex-direction:column; gap:56px}
+.gallery-section h3{margin-bottom:.3rem}
+.gallery-intro{margin:0 0 1.2rem; color:var(--muted)}
+.gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space)}
 .gallery a{display:block; border-radius:var(--radius); overflow:hidden; position:relative}
 .gallery img{
   width:100%; height:230px; object-fit:cover; transition:transform .55s ease, filter .35s;
@@ -220,6 +224,7 @@ textarea{resize:vertical}
 }
 @media (max-width:920px){
   .features .grid-3,.grid-3{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr}
   .hero .hero-inner{padding:56px 0 36px}
   .hero-panel{max-width:96%}
 }
@@ -376,6 +381,8 @@ body{
 
   /* Galería más baja para que respiren las fotos */
   .gallery img{ height: 180px; }
+  #galeria-casa{ gap:36px; }
+  .gallery-intro{ margin-bottom:.6rem; }
 
   /* Formularios cómodos y botones grandes */
   .booking{ max-width:none; }
