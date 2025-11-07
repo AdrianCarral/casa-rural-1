@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://https://casa-rural-carmen-luna.netlify.app/sitemap.xml
+Sitemap: https://casa-rural-carmen-luna.netlify.app/sitemap.xml
