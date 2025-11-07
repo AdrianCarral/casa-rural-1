@@ -4,16 +4,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tarifas y disponibilidad · Casa Rural Carmen Luna</title>
-  <meta name="description" content="Consulta disponibilidad y precios de Casa Rural Carmen Luna en Miñera de Luna. Fin de semana 400 €, noches entre semana 150 €, puentes con tarifa especial. 3 dormitorios (7 plazas), 3 baños y mirador al embalse.">
+  <meta name="description" content="Tarifas actualizadas Casa Rural Carmen Luna. Temporada baja: noches entre semana 200 €/noche, fin de semana 430 € (2 noches). Temporada alta: noches entre semana 210 €/noche, fin de semana 240 €/noche.">
   <meta property="og:title" content="Tarifas y disponibilidad · Casa Rural Carmen Luna">
-  <meta property="og:description" content="Reserva directa: fin de semana 400 €, noches entre semana 150 €. Festivos, Navidad y Semana Santa con precio de fin de semana.">
+  <meta property="og:description" content="Consulta precios y disponibilidad. Depósito 100 € para reservar. Cancelación hasta 15 días antes.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=3">
+  <link rel="stylesheet" href="assets/css/styles.css?v=4">
   <link rel="icon" href="assets/img/favicon.ico">
+  <style>
+    /* Rejilla ancha para las tarjetas de tarifas (2 columnas) */
+    .tarifas-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 880px) {
+      .tarifas-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Pequeños estilos inline para el calculador (no rompen tu CSS existente) */
+    .calc {
+      display:flex; flex-direction:column; gap:12px;
+    }
+    .calc-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .calc-row label { min-width:120px; }
+    .result { background:#fafafa; padding:12px; border-radius:8px; border:1px solid #e6e6e6; }
+    .note { font-size:0.95rem; color:#555; }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -32,60 +53,95 @@
 
   <main class="container section">
     <h1>Tarifas y disponibilidad</h1>
-    <p>Trabajamos con <strong>reserva directa</strong>. La tarifa base es de <strong>400&nbsp;€</strong> para el fin de semana completo (entrada viernes, salida domingo) y <strong>150&nbsp;€ por noche</strong> de domingo a jueves. Escríbenos con tus fechas y ajustamos el presupuesto según nº de personas y noches.</p>
 
-    <!-- BLOQUE TARIFAS ORIENTATIVAS/CTA -->
+    <p>Trabajamos con <strong>reserva directa</strong>. A continuación aparecen las tarifas oficiales por temporada. Para reservar pedimos un <strong>anticipo de 100&nbsp;€</strong> (descontado del importe final) y la reserva puede cancelarse hasta <strong>15 días</strong> antes (ver condiciones completas más abajo).</p>
+
+    <!-- BLOQUE TARIFAS ORIENTATIVAS/CTA (AHORA 2 TARJETAS MÁS ANCHAS) -->
     <section class="section" aria-labelledby="consulta">
       <h2 id="consulta">Tarifas orientativas</h2>
-      <div class="grid-3">
+
+      <div class="tarifas-grid">
         <div class="card">
-          <h3>Fin de semana completo</h3>
-          <p>Entrada viernes, salida domingo. Ideal para desconectar entre <strong>robledales</strong> y <strong>sabinares</strong>, disfrutando del mirador al embalse.</p>
-          <div class="price">
-            <span>2 noches (viernes a domingo)</span>
-            <strong>400&nbsp;€</strong>
+          <h3>Temporada Baja</h3>
+          <p><strong>Ámbito:</strong> resto del año salvo los periodos indicados en 'Temporada alta'.</p>
+          <ul>
+            <li>Noches de domingo a jueves: <strong>200&nbsp;€/noche</strong> (mínimo 2 noches) · <strong>máx 7 personas</strong>.</li>
+            <li>Fin de semana completo (entrada viernes, salida domingo — 2 noches): <strong>430&nbsp;€</strong> (precio por el par de noches).</li>
+          </ul>
+          <div class="price" style="margin-top:12px;">
+            <span>Ejemplo fin de semana (2 noches)</span>
+            <strong style="display:block; margin-top:8px;">430&nbsp;€</strong>
           </div>
-          <a class="btn primary" href="contacto.html">Reservar fin de semana</a>
         </div>
+
         <div class="card">
-          <h3>Noches entre semana</h3>
-          <p>Tarifa plana de domingo a jueves para prolongar tu estancia o trabajar en remoto con vistas al embalse.</p>
-          <div class="price">
-            <span>Domingo a jueves</span>
-            <strong>150&nbsp;€/noche</strong>
+          <h3>Temporada Alta</h3>
+          <p><strong>Incluye:</strong> Semana Santa, julio y agosto, puentes nacionales y regionales en León, y Navidad.</p>
+          <ul>
+            <li>Noches de domingo a jueves: <strong>210&nbsp;€/noche</strong> (mínimo 2 noches).</li>
+            <li>Fin de semana (viernes/sábado): <strong>240&nbsp;€/noche</strong> (mínimo 2 noches).</li>
+          </ul>
+          <div class="price" style="margin-top:12px;">
+            <span>Ejemplo fin de semana (2 noches)</span>
+            <strong style="display:block; margin-top:8px;">480&nbsp;€ (2 × 240&nbsp;€)</strong>
           </div>
-          <a class="btn primary" href="contacto.html">Añadir noches extra</a>
-        </div>
-        <div class="card">
-          <h3>Puentes y festivos</h3>
-          <p>Los <strong>puentes y festivos nacionales en España</strong>, así como <strong>Navidad y Semana Santa</strong>, se tarifican con precio de fin de semana.</p>
-          <div class="price">
-            <span>Precio base (2 noches)</span>
-            <strong>400&nbsp;€</strong>
-          </div>
-          <a class="btn primary" href="contacto.html">Consultar condiciones</a>
         </div>
       </div>
-      <p class="fine">Noches adicionales (viernes o sábado extra) se calculan a <strong>150&nbsp;€/noche</strong>. Mejor precio garantizado en reserva directa. Respuesta rápida por WhatsApp, teléfono o email.</p>
+
+      <p class="fine" style="margin-top:16px;">Mejor precio garantizado en reserva directa. Respuesta rápida por WhatsApp, teléfono o email.</p>
     </section>
 
     <section class="section" aria-labelledby="calcula">
       <h2 id="calcula">Cómo calcular tu estancia</h2>
+
       <div class="grid-3">
         <div class="card">
           <h3>1. Elige tus fechas</h3>
-          <p>Indícanos si se trata de un <strong>fin de semana</strong>, noches entre semana o un <strong>puente/festivo</strong>.</p>
+          <p>Selecciona fecha de entrada y fecha de salida. La calculadora requiere un mínimo de <strong>2 noches</strong>.</p>
         </div>
+
         <div class="card">
-          <h3>2. Suma las noches</h3>
-          <p>Fin de semana = 400&nbsp;€. Añade noches extra a <strong>150&nbsp;€/noche</strong>. Para estancias largas combinamos ambos importes.</p>
+          <h3>2. Usa nuestra calculadora</h3>
+          <div class="calc" id="tarifa-calculador">
+            <div class="calc-row">
+              <label for="start">Entrada</label>
+              <input id="start" type="date">
+            </div>
+            <div class="calc-row">
+              <label for="end">Salida</label>
+              <input id="end" type="date">
+            </div>
+            <div class="calc-row">
+              <label for="guests">Nº de personas</label>
+              <input id="guests" type="number" min="1" max="7" value="2">
+              <span class="note">Máx 7 personas.</span>
+            </div>
+
+            <div class="calc-row" style="align-items:flex-start;">
+              <label>Temporada</label>
+              <div>
+                <label><input type="radio" name="season" value="baja" checked> Temporada Baja</label><br>
+                <label><input type="radio" name="season" value="alta"> Temporada Alta (Julio/Agosto, Semana Santa, puentes, Navidad)</label>
+                <p class="note">Si tu reserva incluye días de Semana Santa/puentes/Navidad, marca "Temporada Alta".</p>
+              </div>
+            </div>
+
+            <div class="calc-row">
+              <button id="calcBtn" class="btn primary">Calcular precio</button>
+              <button id="clearBtn" class="btn ghost" type="button">Borrar</button>
+            </div>
+
+            <div id="calcResult" class="result" aria-live="polite" hidden></div>
+          </div>
         </div>
+
         <div class="card">
           <h3>3. Confirma con nosotros</h3>
-          <p>Te enviamos presupuesto final con limpieza incluida, condiciones de reserva y política de cancelación.</p>
+          <p>Tras calcular te enviaremos presupuesto final con limpieza incluida y condiciones de reserva. Recuerda que la tarifa puede variar si se solicita limpieza adicional o servicios extra.</p>
         </div>
       </div>
-      <p class="fine">Navidad y Semana Santa se consideran estancias especiales y aplican tarifa de fin de semana. Si el puente es más largo de dos noches, se añaden las noches extra a 150&nbsp;€/noche.</p>
+
+      <p class="fine">Nota: las reglas anteriores se han actualizado para adaptar los importes y las condiciones. Si tienes dudas sobre si tus fechas pertenecen a Temporada Alta (p.ej. Semana Santa o puentes regionales), indícalo al reservar para aplicar la tarifa correcta.</p>
     </section>
 
     <section class="section" id="disponibilidad" aria-labelledby="disponibilidad-title">
@@ -142,6 +198,21 @@
       </div>
     </section>
 
+    <!-- CONDICIONES DETALLADAS (se mantiene más abajo) -->
+    <section class="section" aria-labelledby="condiciones">
+      <h2 id="condiciones">Condiciones de reserva</h2>
+      <div class="card">
+        <h3>Anticipo y pago</h3>
+        <p>Para confirmar una reserva se solicita un anticipo de <strong>100&nbsp;€</strong>. Este importe se deducirá del pago final, que se realizará el día de la entrada en la casa.</p>
+
+        <h3>Cancelaciones</h3>
+        <p>Se podrá cancelar la reserva sin penalización si se notifica con al menos <strong>15 días</strong> de antelación. En cancelaciones con menos de 15 días podremos retener total o parcialmente el anticipo según la disponibilidad y el coste de los días no ocupados.</p>
+
+        <h3>Personas y limpieza</h3>
+        <p>La capacidad máxima es de <strong>7 personas</strong>. La tarifa base incluye limpieza estándar; servicios extra de limpieza pueden tener coste adicional y se confirmarán al solicitarse.</p>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -150,6 +221,156 @@
       <p class="fine">Aviso legal · Privacidad · Cookies</p>
     </div>
   </footer>
+
+  <script>
+    /* Calculador de tarifas: aplica las reglas descritas en la página.
+       Reglas aplicadas (resumen):
+       - Mínimo 2 noches para cualquier reserva.
+       - Temporada Baja:
+         - Noches dom–jue: 200 €/noche.
+         - Par viernes+sábado (fin de semana): 430 € por las 2 noches (si están presentes consecutivas).
+         - Si queda viernes o sábado suelto se aplica un importe por noche proporcional.
+       - Temporada Alta:
+         - Noches dom–jue: 210 €/noche.
+         - Noches viernes y sábado: 240 €/noche.
+       - Si el usuario selecciona "Temporada Alta" se aplican las tarifas de alta a todas las noches.
+    */
+    (function() {
+      const startEl = document.getElementById('start');
+      const endEl = document.getElementById('end');
+      const guestsEl = document.getElementById('guests');
+      const calcBtn = document.getElementById('calcBtn');
+      const clearBtn = document.getElementById('clearBtn');
+      const resultEl = document.getElementById('calcResult');
+
+      function parseDate(d) {
+        const parts = d.split('-');
+        return new Date(parts[0], parts[1]-1, parts[2]);
+      }
+
+      function diffDays(a,b) {
+        const msPerDay = 24 * 60 * 60 * 1000;
+        return Math.round((b - a) / msPerDay);
+      }
+
+      function iterateDates(start, nights) {
+        const arr = [];
+        for (let i=0;i<nights;i++) {
+          const d = new Date(start);
+          d.setDate(d.getDate() + i);
+          arr.push(d);
+        }
+        return arr;
+      }
+
+      function isFridaySaturdayPair(dates) {
+        for (let i=0;i<dates.length-1;i++) {
+          if (dates[i].getDay() === 5 && dates[i+1].getDay() === 6) return i;
+        }
+        return -1;
+      }
+
+      function formatEuro(v) {
+        return v.toLocaleString('es-ES', {style:'currency', currency:'EUR', minimumFractionDigits: 0});
+      }
+
+      calcBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        resultEl.hidden = true;
+        resultEl.innerHTML = '';
+
+        const s = startEl.value;
+        const eDate = endEl.value;
+        if (!s || !eDate) {
+          resultEl.hidden = false;
+          resultEl.innerHTML = '<strong>Error:</strong> selecciona fecha de entrada y salida.';
+          return;
+        }
+        const start = parseDate(s);
+        const end = parseDate(eDate);
+        if (end <= start) {
+          resultEl.hidden = false;
+          resultEl.innerHTML = '<strong>Error:</strong> la fecha de salida debe ser posterior a la de entrada.';
+          return;
+        }
+
+        const nights = diffDays(start, end);
+        if (nights < 2) {
+          resultEl.hidden = false;
+          resultEl.innerHTML = '<strong>Error:</strong> la estancia mínima es de 2 noches.';
+          return;
+        }
+
+        const season = document.querySelector('input[name="season"]:checked').value;
+        const tarifs = {
+          baja: { weekday: 200, weekendPair: 430, weekendPerNight: 215 },
+          alta: { weekday: 210, weekendPerNight: 240 }
+        };
+
+        const dates = iterateDates(start, nights);
+        let total = 0;
+        let breakdown = [];
+
+        if (season === 'baja') {
+          const pairIndex = isFridaySaturdayPair(dates);
+          if (pairIndex !== -1) {
+            total += tarifs.baja.weekendPair;
+            breakdown.push({desc: 'Fin de semana (vie+sab) — tarifa fija (par)', nights:2, price: tarifs.baja.weekendPair});
+            dates.splice(pairIndex, 2);
+          }
+          dates.forEach(d => {
+            const day = d.getDay();
+            if (day === 5 || day === 6) {
+              const perNight = tarifs.baja.weekendPerNight;
+              total += perNight;
+              breakdown.push({desc: `Noche ${d.toLocaleDateString()} (vie/sab suelta)`, nights:1, price: perNight});
+            } else {
+              total += tarifs.baja.weekday;
+              breakdown.push({desc: `Noche ${d.toLocaleDateString()} (dom–jue)`, nights:1, price: tarifs.baja.weekday});
+            }
+          });
+        } else {
+          dates.forEach(d => {
+            const day = d.getDay();
+            if (day === 5 || day === 6) {
+              total += tarifs.alta.weekendPerNight;
+              breakdown.push({desc: `Noche ${d.toLocaleDateString()} (vie/sab)`, nights:1, price: tarifs.alta.weekendPerNight});
+            } else {
+              total += tarifs.alta.weekday;
+              breakdown.push({desc: `Noche ${d.toLocaleDateString()} (dom–jue)`, nights:1, price: tarifs.alta.weekday});
+            }
+          });
+        }
+
+        const deposit = 100;
+        const dueOnArrival = Math.max(0, total - deposit);
+
+        let html = `<strong>Resumen</strong><br>`;
+        html += `Fechas: <em>${start.toLocaleDateString()}</em> → <em>${end.toLocaleDateString()}</em> · <strong>${nights} noches</strong><br>`;
+        html += `Temporada: <strong>${season === 'baja' ? 'Baja' : 'Alta'}</strong><br>`;
+        html += `<ul>`;
+        breakdown.forEach(b => {
+          html += `<li>${b.desc} — ${formatEuro(b.price)}${b.nights>1 ? ' (por ' + b.nights + ' noches)' : ''}</li>`;
+        });
+        html += `</ul>`;
+        html += `<p class="note"><strong>Total estancia:</strong> ${formatEuro(total)}</p>`;
+        html += `<p class="note">Anticipo a pagar para reservar: <strong>${formatEuro(deposit)}</strong> (descontado del total). Cantidad restante a pagar el día de entrada: <strong>${formatEuro(dueOnArrival)}</strong>.</p>`;
+        html += `<p class="note">Máx 7 personas. Si necesitas factura, indícalo en la reserva.</p>`;
+        resultEl.hidden = false;
+        resultEl.innerHTML = html;
+      });
+
+      clearBtn.addEventListener('click', function(){
+        startEl.value = '';
+        endEl.value = '';
+        guestsEl.value = 2;
+        document.querySelector('input[name="season"][value="baja"]').checked = true;
+        resultEl.hidden = true;
+        resultEl.innerHTML = '';
+      });
+    })();
+  </script>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>
