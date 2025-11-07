@@ -9,6 +9,7 @@ Esta guía resume los puntos revisados para el nuevo contenido de Casa Rural Car
 - **Formularios**: el formulario de contacto usa Netlify Forms (`data-netlify="true"`). Activa el antispam (honeypot ya configurado) y añade reCAPTCHA o control adicional si detectas envíos maliciosos. Revisa que las notificaciones y el almacenamiento cumplan con RGPD.
 - **Embeds externos**: el iframe de Google Calendar está permitido en la CSP (`frame-src`). Mantén el enlace actualizado y revisa periódicamente los permisos de Google Calendar.
 - **Privacidad**: actualmente no se instalan cookies ni scripts de terceros (analítica, píxeles). Si se añaden en el futuro, actualiza el aviso de cookies/privacidad y amplía la CSP y el consentimiento explícito.
+- **Textos legales**: se incluyen páginas de Aviso legal, Privacidad y Cookies enlazadas desde el pie. Antes del lanzamiento, completa los datos obligatorios del titular (nombre completo, NIF/CIF y nº de registro turístico) y revisa que la política de cookies coincida con los servicios activos.
 - **Backups y versiones**: conserva copias de la carpeta estática y utiliza control de versiones (Git) antes de cada cambio.
 
 ## Contenido y distribución
