@@ -67,6 +67,7 @@
           <ul>
             <li>Noches de domingo a jueves: <strong>200&nbsp;€/noche</strong> (mínimo 2 noches) · <strong>máx 7 personas</strong>.</li>
             <li>Fin de semana completo (entrada viernes, salida domingo — 2 noches): <strong>430&nbsp;€</strong> (precio por el par de noches).</li>
+            <li>Con reservas superiores a 4 noches se aplica un 10% de descuento.</li>
           </ul>
           <div class="price" style="margin-top:12px;">
             <span>Ejemplo fin de semana (2 noches)</span>
@@ -81,6 +82,7 @@
             <li>Puentes nacionales y regionales: estancia mínima de 3 noches.</li>
             <li>Noches de domingo a jueves: <strong>210&nbsp;€/noche</strong> (mínimo 2 noches).</li>
             <li>Fin de semana (viernes/sábado): <strong>240&nbsp;€/noche</strong> (mínimo 2 noches).</li>
+            <li>Con reservas superiores a 4 noches se aplica un 10% de descuento.</li>
           </ul>
           <div class="price" style="margin-top:12px;">
             <span>Ejemplo fin de semana (2 noches)</span>
@@ -138,7 +140,7 @@
 
         <div class="card">
           <h3>3. Confirma con nosotros</h3>
-          <p>Tras calcular te enviaremos presupuesto final con limpieza incluida y condiciones de reserva. Recuerda que la tarifa puede variar si se solicita limpieza adicional o servicios extra.</p>
+          <p>Tras calcular te enviaremos presupuesto final y condiciones de reserva.</p>
         </div>
       </div>
 
@@ -179,7 +181,7 @@
         </div>
         <div class="card">
           <h3>Capacidad</h3>
-          <p><strong>7 plazas</strong> · Suite con baño privado, dormitorio doble y dormitorio triple.</p>
+          <p><strong>7 plazas</strong> · Dormitorio con baño privado, dormitorio doble y dormitorio triple.</p>
         </div>
         <div class="card">
           <h3>Ubicación</h3>
@@ -193,8 +195,9 @@
           <p>WiFi gratis en zonas comunes. TV satélite. Cobertura móvil variable según operador.</p>
         </div>
         <div class="card">
-          <h3>Política de humo</h3>
+          <h3>Normas de la casa</h3>
           <p><strong>Prohibido fumar</strong> en todo el alojamiento.</p>
+          <p><strong>Prohibido despedidas de soltero/a</strong> en todo el alojamiento.</p>
         </div>
       </div>
     </section>
@@ -210,7 +213,7 @@
         <p>Se podrá cancelar la reserva sin penalización si se notifica con al menos <strong>15 días</strong> de antelación. En cancelaciones con menos de 15 días podremos retener total o parcialmente el anticipo según la disponibilidad y el coste de los días no ocupados.</p>
 
         <h3>Personas y limpieza</h3>
-        <p>La capacidad máxima es de <strong>7 personas</strong>. La tarifa base incluye limpieza estándar; servicios extra de limpieza pueden tener coste adicional y se confirmarán al solicitarse.</p>
+        <p>La capacidad máxima es de <strong>7 personas</strong>. La tarifa base incluye limpieza estándar.</p>
       </div>
     </section>
 
@@ -360,7 +363,6 @@
         html += `</ul>`;
         html += `<p class="note"><strong>Total estancia:</strong> ${formatEuro(total)}</p>`;
         html += `<p class="note">Anticipo a pagar para reservar: <strong>${formatEuro(deposit)}</strong> (descontado del total). Cantidad restante a pagar el día de entrada: <strong>${formatEuro(dueOnArrival)}</strong>.</p>`;
-        html += `<p class="note">Máx 7 personas. Si necesitas factura, indícalo en la reserva.</p>`;
         resultEl.hidden = false;
         resultEl.innerHTML = html;
       });

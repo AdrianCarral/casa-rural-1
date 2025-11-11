@@ -14,7 +14,7 @@ Esta guía resume los puntos revisados para el nuevo contenido de Casa Rural Car
 
 ## Contenido y distribución
 
-- **Información verificada**: se ha actualizado la distribución de la casa (suite con baño privado, dormitorio triple, dormitorio doble y hall-mirador acristalado), la política de tarifas (400 € fin de semana, 150 €/noche entre semana, festivos, Navidad y Semana Santa con precio de fin de semana) y los recursos locales (restaurantes, museos, balneario).
+- **Información verificada**: se ha actualizado la distribución de la casa (habitación con baño privado, dormitorio triple, dormitorio doble y hall-mirador acristalado), la política de tarifas (400 € fin de semana, 150 €/noche entre semana, festivos, Navidad y Semana Santa con precio de fin de semana) y los recursos locales (restaurantes, museos, balneario).
 - **Calendario**: el calendario embebido es solo de consulta. Para reservas, mantén sincronizadas las fechas bloqueadas y revisa la visualización en dispositivos móviles.
 - **Datos de contacto**: valida que los teléfonos, dirección de email de respuesta y enlaces de WhatsApp estén actualizados antes de hacer público el sitio.
 - **Multimedia**: las imágenes actuales son provisionales. Sustitúyelas por las definitivas optimizadas (peso inferior a 300 KB si es posible) y añade `alt` descriptivos acordes.
