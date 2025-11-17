@@ -358,7 +358,11 @@
     import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
     const lightbox = new PhotoSwipeLightbox({
       gallery: '#galeria-casa',
-      children: 'a',
+      children: '.gallery a',
+      showHideAnimationType: 'fade',
+      paddingFn: (vp) => vp.x < 700 ? { top:24, bottom:24, left:12, right:12 } : { top:32, bottom:32, left:32, right:32 },
+      initialZoomLevel: 'fit',
+      secondaryZoomLevel: 1.2,
       pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.esm.min.js')
     });
     lightbox.init();
