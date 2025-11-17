@@ -38,7 +38,7 @@
       <!-- FORMULARIO -->
       <div class="card" style="grid-column: span 2;">
         <h2 style="margin-top:0">Escríbenos</h2>
-        <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias/" accept-charset="UTF-8" class="booking">
+        <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html" accept-charset="UTF-8" class="booking">
           <input type="hidden" name="form-name" value="contacto">
           <p style="display:none"><label>Si eres humano, deja esto vacío: <input name="bot-field"></label></p>
 
@@ -52,7 +52,7 @@
             <input type="tel" name="telefono" inputmode="tel" autocomplete="tel">
           </label>
 
-          <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:12px">
+          <div class="field-row two">
             <label>Fecha de entrada
               <input type="date" name="fecha_entrada">
             </label>
@@ -61,7 +61,7 @@
             </label>
           </div>
 
-          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px">
+          <div class="field-row three">
             <label>Adultos
               <input type="number" name="adultos" min="1" max="7" placeholder="2">
             </label>
