@@ -481,12 +481,15 @@ body{
   /* Hero menos alto y panel centrado */
   .hero .hero-inner{ padding:38px 0 26px; min-height:auto; }
   .hero-panel{ max-width:100%; padding:16px; text-align:center; }
+
   .hero-panel h1{ margin-bottom:.4rem; }
   .hero-ctas{ flex-direction:column; gap:10px; }
   .hero-ctas .btn{ width:100%; justify-content:center; }
   .hero-quick{ justify-content:center; }
   .hero-quick span{ flex:1 1 calc(50% - 10px); justify-content:center; }
   .hero-peek{ display:grid; grid-template-columns:repeat(2,1fr); }
+  .hero-ctas{ flex-direction:column; gap:10px; }
+  .hero-ctas .btn{ width:100%; justify-content:center; }
 
   /* Rejillas: una sola columna y más separación */
   .grid-3{ grid-template-columns:1fr; gap: calc(var(--space) * 1.15); }
