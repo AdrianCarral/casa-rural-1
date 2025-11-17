@@ -238,6 +238,9 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #bcd; outline-offset:2px}
 
 /* =Bloques de precio/booking */
 .booking{display:grid; gap:12px; max-width:520px}
+.field-row{display:grid; gap:12px}
+.field-row.two{grid-template-columns:repeat(2,1fr)}
+.field-row.three{grid-template-columns:repeat(3,1fr)}
 .price{
   display:flex; justify-content:space-between; align-items:center;
   padding:12px 14px; border:1px dashed #ddd; border-radius:14px; background:#fbfbfb
@@ -274,6 +277,16 @@ textarea{resize:vertical}
 .sticky-cta{
   position:sticky; bottom:16px; z-index:30; padding:12px; border-radius:16px;
   background:rgba(255,255,255,.9); backdrop-filter:blur(8px); border:1px solid #e9e6e0; box-shadow:var(--shadow);
+}
+
+/* Páginas legales: ancho más estrecho y texto centrado en móvil */
+.legal-page main{max-width:860px; margin:0 auto;}
+.legal-page main h1,.legal-page main h2{letter-spacing:-.01em;}
+.legal-page main ul{padding-left:1rem;}
+@media (max-width: 768px){
+  .legal-page main{ text-align:center; }
+  .legal-page main ul{ list-style-position:inside; padding-left:0; }
+  .legal-page main li{ margin-bottom:8px; }
 }
 
 /* =Accesibilidad y movimiento reducido */
@@ -440,18 +453,24 @@ body{
 /* =================== Mobile polish: más aire y legibilidad =================== */
 @media (max-width: 768px){
   /* Contenedor y tipografía */
+  body{ font-size:15px; }
   .container{ padding:0 calc(var(--space) * .9); }
-  h1{ font-size:clamp(26px, 7vw, 34px); }
-  h2{ font-size:clamp(20px, 5.6vw, 26px); }
+  h1{ font-size:clamp(26px, 6.6vw, 34px); }
+  h2{ font-size:clamp(20px, 5.4vw, 26px); }
+  p{ line-height:1.6; }
   .section{ padding:28px 0 40px; }
 
-  /* Menú: que no se corte y sea cómodo de usar */
-  nav{ overflow-x:auto; -webkit-overflow-scrolling:touch; gap:6px; padding-bottom:6px; }
-  .nav-link, .nav .btn{ flex:0 0 auto; padding:12px 14px; font-size:16px; min-height:46px; border-radius:16px; }
+  /* Menú: envuelto en dos filas, centrado y sin scroll horizontal */
+  .nav{ flex-direction:column; align-items:center; height:auto; gap:10px; padding:10px 0; }
+  .nav > nav{ width:100%; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
+  .nav-link, .nav .btn{ flex:1 1 calc(50% - 10px); text-align:center; padding:10px 12px; font-size:15px; min-height:42px; border-radius:14px; }
+  .nav .btn::after{ display:none; }
 
-  /* Hero menos alto y panel a todo ancho */
-  .hero .hero-inner{ padding:42px 0 28px; min-height:auto; }
-  .hero-panel{ max-width:100%; padding:16px; }
+  /* Hero menos alto y panel centrado */
+  .hero .hero-inner{ padding:38px 0 26px; min-height:auto; }
+  .hero-panel{ max-width:100%; padding:16px; text-align:center; }
+  .hero-ctas{ flex-direction:column; gap:10px; }
+  .hero-ctas .btn{ width:100%; justify-content:center; }
 
   /* Rejillas: una sola columna y más separación */
   .grid-3{ grid-template-columns:1fr; gap: calc(var(--space) * 1.15); }
@@ -466,14 +485,19 @@ body{
 
   /* Formularios cómodos y botones grandes */
   .booking{ max-width:none; }
+  .field-row.two,.field-row.three{ grid-template-columns:1fr; }
   .card .btn{ width:100%; } /* hace los botones de tarjetas y CTAs a todo el ancho */
-  
+
   /* Si algún elemento usa "grid-column: span 2" (como el formulario), forzamos 1 col en móvil */
   .grid-3 > [style*="span 2"]{ grid-column: auto !important; }
 
   /* Bloques de CTA en fila responsiva */
-  .cta-row{ display:flex; gap:10px; }
-  .cta-row .btn{ flex:1; }
+  .cta-row{ display:flex; gap:10px; flex-direction:column; }
+  .cta-row .btn{ flex:1; width:100%; }
+
+  /* Footer centrado y con enlaces agrupados */
+  .site-footer .container{ align-items:center; text-align:center; }
+  .site-footer nav{ justify-content:center; }
 }
 
 /* Un pelín más de aire aún en móviles muy pequeños */
@@ -501,9 +525,10 @@ body{
     border-bottom:1px solid #ece8e1;
   }
   .nav{
-    height:60px;                /* era 78px */
-    padding:8px var(--space);
-    gap:8px;
+    height:auto;
+    padding:10px var(--space);
+    gap:10px;
+    align-items:center;
   }
 
   /* Marca en una sola línea (no partir “Casa Rural”) */
@@ -514,24 +539,21 @@ body{
     margin-right:6px;
   }
 
-  /* Menú: una sola fila desplazable, sin envolver */
+  /* Menú: dos filas centradas y sin desplazamiento lateral */
   .nav > nav{
     display:flex;
-    flex-wrap:nowrap;           /* ¡clave! no hacer 2 filas */
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-    gap:6px;
-    scroll-snap-type:x proximity;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    overflow:visible;
   }
-  .nav > nav::-webkit-scrollbar{ display:none; } /* ocultar scrollbar iOS */
 
-  /* Pills más contenidos (44px de alto accesible) */
+  /* Pills compactos y centrados */
   .nav-link,
   .nav .btn{
-    flex:0 0 auto;
-    scroll-snap-align:center;
-    min-height:44px;
-    padding:10px 12px;          /* antes más ancho */
+    flex:1 1 calc(50% - 10px);
+    min-height:42px;
+    padding:10px 12px;
     border-radius:14px;
     font-size:15px;
     line-height:1;
