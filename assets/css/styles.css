@@ -63,46 +63,19 @@ a{color:var(--lake); text-underline-offset:2px}
   background:rgba(255,255,255,.88);
   border-bottom:1px solid #eee;
 }
-.nav{display:flex; align-items:center; justify-content:space-between; height:68px; position:relative}
+.nav{display:flex; align-items:center; justify-content:space-between; height:68px}
 .brand{
   font-weight:800; text-decoration:none; letter-spacing:.2px;
   color:var(--pine);
   font-family:Lora,Georgia,serif;
 }
 nav{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
-.nav-menu{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
 .nav-link{
   color:#3e423f; text-decoration:none; padding:8px 12px; border-radius:12px; transition:.2s;
 }
 .nav-link:hover{background:#f3f3f3}
 .nav-link.active{background:rgba(40,74,63,.12); color:var(--pine)}
 .nav .btn{margin-left:4px}
-
-.nav-toggle{
-  display:none;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:10px 12px;
-  border-radius:12px;
-  border:1px solid #dcdcdc;
-  background:#fff;
-  color:var(--pine);
-  cursor:pointer;
-  box-shadow:var(--inner);
-}
-.nav-toggle__text{font-weight:600; font-size:15px;}
-.nav-toggle:focus-visible{outline:3px solid #bcd; outline-offset:3px}
-.nav-toggle__bars{
-  position:relative;
-  display:block;
-  width:18px;
-  height:2px;
-  background:currentColor;
-  box-shadow:0 6px 0 currentColor, 0 -6px 0 currentColor;
-  transition:transform .2s ease;
-}
-.nav-toggle[aria-expanded="true"] .nav-toggle__bars{transform:rotate(90deg)}
 
 /* =Botones */
 .btn{
@@ -568,44 +541,6 @@ body{
   p{ line-height:1.6; }
   .section{ padding:28px 0 40px; }
 
-  /* Menú móvil compacto y desplegable */
-  .nav{ gap:10px; }
-  .nav-toggle{ display:flex; }
-  .nav-menu{
-    position:absolute;
-    top:calc(100% + 6px);
-    right:var(--space);
-    left:var(--space);
-    flex-direction:column;
-    gap:6px;
-    padding:12px;
-    background:#fff;
-    border:1px solid #e7e1d7;
-    border-radius:16px;
-    box-shadow:var(--shadow);
-    transform-origin:top;
-    transform:scaleY(0.9);
-    opacity:0;
-    pointer-events:none;
-    transition:transform .18s ease, opacity .18s ease;
-    max-height:70vh;
-    overflow-y:auto;
-  }
-  .nav-menu.is-open{
-    transform:scaleY(1);
-    opacity:1;
-    pointer-events:auto;
-  }
-  .nav-menu .nav-link,
-  .nav-menu .btn{
-    width:100%;
-    justify-content:flex-start;
-    text-align:left;
-    padding:12px 14px;
-    font-size:16px;
-    min-height:44px;
-    border-radius:14px;
-  }
   /* Menú: envuelto en dos filas, centrado y sin scroll horizontal */
   .nav{ flex-direction:column; align-items:center; height:auto; gap:10px; padding:10px 0; }
   .nav > nav{ width:100%; display:flex; flex-wrap:wrap; justify-content:center; gap:8px; }
@@ -706,13 +641,6 @@ body{
     margin-right:6px;
   }
 
-  /* Menú en columna cuando se despliega */
-  .nav-menu{ box-shadow:var(--shadow); }
-  .nav-menu .nav-link,
-  .nav-menu .btn{
-    min-height:44px;
-    padding:11px 14px;
-
   /* Menú: dos filas centradas y sin desplazamiento lateral */
   .nav > nav{
     display:flex;
@@ -730,7 +658,7 @@ body{
     padding:10px 12px;
     border-radius:14px;
     font-size:15px;
-    line-height:1.1;
+    line-height:1;
   }
 
   /* Quitamos el efecto “pulse” para que no invada otros pills */
