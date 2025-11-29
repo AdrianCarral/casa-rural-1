@@ -12,58 +12,50 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=3">
-  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=3">
+  <link rel="icon" href="/assets/img/favicon.ico">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html">Casa Rural</a>
-      <nav>
-        <a class="nav-link active" href="index.html">Inicio</a>
-        <a class="nav-link" href="casa.html">La casa</a>
-        <a class="nav-link" href="historia.html">Historia</a>
-        <a class="nav-link" href="entorno.html">Entorno</a>
-        <a class="nav-link" href="tarifas.html">Tarifas</a>
-        <a class="nav-link btn" href="contacto.html">Contacto</a>
+      <a class="brand" href="/">Casa Rural</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__text">Menú</span>
+      </button>
+      <nav class="nav-menu">
+        <a class="nav-link active" href="/">Inicio</a>
+        <a class="nav-link" href="/casa.html">La casa</a>
+        <a class="nav-link" href="/historia.html">Historia</a>
+        <a class="nav-link" href="/entorno.html">Entorno</a>
+        <a class="nav-link" href="/tarifas.html">Tarifas</a>
+        <a class="nav-link btn" href="/contacto/">Contacto</a>
       </nav>
     </div>
   </header>
   
   <!-- HERO -->
-  <section class="hero hero-image" 
-    style="background-image:url('assets/img/FotoPrincipal.jpeg'); background-position:60% center;">
+  <section class="hero hero-image home-hero"
+    style="background-image:url('/assets/img/FotoPrincipal.jpeg'); background-position:center;">
     <div class="container hero-inner">
       <div class="hero-panel">
+        <p class="hero-kicker">Embalse de Luna · León</p>
         <h1>Casa Rural Carmen Luna</h1>
-        <p>En Miñera de Luna, en plena Reserva de la Biosfera de Omaña y Luna. Casa de piedra de 1954 rehabilitada, con <strong>hall-mirador acristalado</strong> y <strong>vistas al embalse de Luna</strong>, ideal para desconectar en familia o con amigos.</p>
+        <p>Casa de piedra rehabilitada con hall-mirador acristalado, jardín y barbacoa. Vistas directas al embalse para disfrutar en familia o con amigos.</p>
         <div class="hero-ctas">
-          <a class="btn primary" href="tarifas.html">Consultar disponibilidad y tarifas</a>
-          <a class="btn ghost" href="casa.html">Ver la casa</a>
+          <a class="btn primary" href="/tarifas.html">Consultar disponibilidad y tarifas</a>
+          <a class="btn ghost" href="/casa.html">Ver la casa</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- DESTACADOS RÁPIDOS -->
-  <section class="container section">
-    <div class="grid-3">
-      <div class="card">
-        <h3>Capacidad & espacios</h3>
-        <p><strong>3 dormitorios</strong> (Habitación con baño privado, triple y doble; <strong>7 plazas</strong>), <strong>3 baños</strong>, salón-cocina abierto, <strong>hall-mirador acristalado</strong> y vistas directas al embalse.</p>
-        <a class="more" href="casa.html">Ver distribución →</a>
-      </div>
-      <div class="card">
-        <h3>Equipamiento completo</h3>
-        <p>Cocina equipada (lavavajillas, lavadora, horno, microondas, inducción, <em>Nespresso</em>, cafetera eléctrica, tostador, exprimidor, batidora), <strong>WiFi</strong>, TV, juegos de mesa y más.</p>
-        <a class="more" href="casa.html#equipamiento">Todo lo que incluye →</a>
-      </div>
-      <div class="card">
-        <h3>Exterior y descanso</h3>
-        <p><strong>Jardín</strong>, <strong>barbacoa</strong> y cenador para disfrutar al aire libre. Parking público gratuito en las inmediaciones y entorno tranquilo rodeado de robledales y sabinares.</p>
-        <a class="more" href="entorno.html">Descubrir el entorno →</a>
-      </div>
-    </div>
+  <!-- FOTO PANORÁMICA -->
+  <section class="wide-photo" aria-label="Paisaje alrededor de la casa">
+    <figure class="wide-photo__frame">
+      <img src="/assets/img/paisaje-5.jpg" alt="Paisaje amplio del embalse de Luna y las montañas cercanas a Casa Rural Carmen Luna">
+      <figcaption>El embalse de Luna y las montañas que rodean la casa, a unos pasos del alojamiento.</figcaption>
+    </figure>
   </section>
 
   <!-- ENTORNO -->
@@ -74,17 +66,17 @@
       <div class="card">
         <h3>Rutas señalizadas</h3>
         <p>Rutas de la Reserva de Omaña y Luna, sabinares accesibles y sendas junto al embalse. Perfecto para caminar en todas las estaciones.</p>
-        <a class="more" href="entorno.html#rutas">Ver rutas →</a>
+        <a class="more" href="/entorno.html#rutas">Ver rutas →</a>
       </div>
       <div class="card">
         <h3>Actividades en el embalse</h3>
         <p>Pesca, kayak y paddle, baño en zonas tranquilas y observación de fauna. También opciones de caza en temporada.</p>
-        <a class="more" href="entorno.html#embalse">Más actividades →</a>
+        <a class="more" href="/entorno.html#embalse">Más actividades →</a>
       </div>
       <div class="card">
         <h3>Cerca de todo</h3>
         <p>A <strong>50&nbsp;km de León</strong> (AP-66 o CL-626) y <strong>70&nbsp;km de Oviedo</strong> (AP-66). <strong>Aeropuerto de León</strong> a 63&nbsp;km.</p>
-        <a class="more" href="contacto.html#como-llegar">Cómo llegar →</a>
+        <a class="more" href="/contacto/#como-llegar">Cómo llegar →</a>
       </div>
     </div>
   </section>
@@ -131,8 +123,8 @@
         <p style="margin:0">Consúltanos disponibilidad y precio para tus fechas. Respondemos rápido por WhatsApp, teléfono o email.</p>
       </div>
       <div style="display:flex; gap:12px">
-        <a class="btn primary" href="tarifas.html">Ver tarifas</a>
-        <a class="btn ghost" href="contacto.html">Contactar</a>
+        <a class="btn primary" href="/tarifas.html">Ver tarifas</a>
+        <a class="btn ghost" href="/contacto/">Contactar</a>
       </div>
     </div>
   </section>
@@ -141,12 +133,12 @@
     <div class="container">
       <p>© 2025 Casa Rural Carmen Luna. Todos los derechos reservados.</p>
       <nav aria-label="Información legal">
-        <a href="aviso-legal.html">Aviso legal</a>
-        <a href="privacidad.html">Privacidad</a>
-        <a href="cookies.html">Cookies</a>
+        <a href="/aviso-legal.html">Aviso legal</a>
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/cookies.html">Cookies</a>
       </nav>
     </div>
   </footer>
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>

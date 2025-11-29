@@ -13,26 +13,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
-  <link rel="stylesheet" href="assets/css/styles.css?v=3">
-  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=3">
+  <link rel="icon" href="/assets/img/favicon.ico">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html">Casa Rural</a>
-      <nav>
-        <a class="nav-link" href="index.html">Inicio</a>
-        <a class="nav-link" href="casa.html">La casa</a>
-        <a class="nav-link" href="historia.html">Historia</a>
-        <a class="nav-link active" href="entorno.html">Entorno</a>
-        <a class="nav-link" href="tarifas.html">Tarifas</a>
-        <a class="nav-link btn" href="contacto.html">Contacto</a>
+      <a class="brand" href="/">Casa Rural</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__text">Menú</span>
+      </button>
+      <nav class="nav-menu">
+        <a class="nav-link" href="/">Inicio</a>
+        <a class="nav-link" href="/casa.html">La casa</a>
+        <a class="nav-link" href="/historia.html">Historia</a>
+        <a class="nav-link active" href="/entorno.html">Entorno</a>
+        <a class="nav-link" href="/tarifas.html">Tarifas</a>
+        <a class="nav-link btn" href="/contacto/">Contacto</a>
       </nav>
     </div>
   </header>
   
   <main>
-    <section class="page-hero" style="--hero-bg:url('../img/paisaje-3.jpeg');">
+    <section class="page-hero" style="--hero-bg:url('/assets/img/paisaje-3.jpeg');">
       <div class="container">
         <h1>Entorno y actividades</h1>
         <p><strong>Casa Rural Carmen Luna</strong> se asienta en <strong>Miñera de Luna</strong>, dentro de la <strong>Reserva de la Biosfera de Omaña y Luna</strong>, rodeada por el robledal de la Mata y los pintorescos sabinares de Luna.</p>
@@ -47,7 +51,7 @@
         <div class="card">
           <h3>Accesos</h3>
           <p>A <strong>50 km de León</strong> por AP-66 o CL-626 y <strong>70 km de Oviedo</strong> por AP-66. <strong>Aeropuerto de León</strong> a 63 km.</p>
-          <p class="fine"><a class="more" href="contacto.html#como-llegar">Cómo llegar →</a></p>
+          <p class="fine"><a class="more" href="/contacto/#como-llegar">Cómo llegar →</a></p>
         </div>
         <div class="card">
           <h3>Barrios de Luna · 9 km</h3>
@@ -65,7 +69,7 @@
     </section>
 
     <!-- RUTAS -->
-    <section class="section scenic" style="--section-bg:url('../img/paisaje-2.jpeg');" aria-labelledby="rutas">
+    <section class="section scenic" style="--section-bg:url('/assets/img/paisaje-2.jpeg');" aria-labelledby="rutas">
       <div class="container">
         <h2 id="rutas">Rutas de la Reserva de Omaña y Luna</h2>
         <p>Senderos entre <strong>robledales</strong> y <strong>sabinares</strong>, rutas junto al embalse y miradores naturales para disfrutar durante todo el año. En la casa encontrarás <strong>información de rutas señalizadas</strong>, mapas y recomendaciones actualizadas.</p>
@@ -96,7 +100,7 @@
     </section>
 
     <!-- ACTIVIDADES EN EL EMBALSE -->
-    <section class="section scenic" style="--section-bg:url('../img/paisaje-1.jpeg');" aria-labelledby="embalse">
+    <section class="section scenic" style="--section-bg:url('/assets/img/paisaje-1.jpeg');" aria-labelledby="embalse">
       <div class="container">
         <h2 id="embalse">Actividades en el embalse de Luna</h2>
         <div class="grid-3">
@@ -209,12 +213,12 @@
     <div class="container">
       <p>© 2025 Casa Rural Carmen Luna. Todos los derechos reservados.</p>
       <nav aria-label="Información legal">
-        <a href="aviso-legal.html">Aviso legal</a>
-        <a href="privacidad.html">Privacidad</a>
-        <a href="cookies.html">Cookies</a>
+        <a href="/aviso-legal.html">Aviso legal</a>
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/cookies.html">Cookies</a>
       </nav>
     </div>
   </footer>
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>

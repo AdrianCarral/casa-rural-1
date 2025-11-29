@@ -12,20 +12,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css?v=3">
-  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=3">
+  <link rel="icon" href="/assets/img/favicon.ico">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html">Casa Rural</a>
-      <nav>
-        <a class="nav-link" href="index.html">Inicio</a>
-        <a class="nav-link" href="casa.html">La casa</a>
-        <a class="nav-link" href="historia.html">Historia</a>
-        <a class="nav-link" href="entorno.html">Entorno</a>
-        <a class="nav-link" href="tarifas.html">Tarifas</a>
-        <a class="nav-link btn active" href="contacto.html">Contacto</a>
+      <a class="brand" href="/">Casa Rural</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__text">Menú</span>
+      </button>
+      <nav class="nav-menu">
+        <a class="nav-link" href="/">Inicio</a>
+        <a class="nav-link" href="/casa.html">La casa</a>
+        <a class="nav-link" href="/historia.html">Historia</a>
+        <a class="nav-link" href="/entorno.html">Entorno</a>
+        <a class="nav-link" href="/tarifas.html">Tarifas</a>
+        <a class="nav-link btn active" href="/contacto/">Contacto</a>
       </nav>
     </div>
   </header>
@@ -38,7 +42,7 @@
       <!-- FORMULARIO -->
       <div class="card" style="grid-column: span 2;">
         <h2 style="margin-top:0">Escríbenos</h2>
-        <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="booking">
+        <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias/" accept-charset="UTF-8" class="booking">
           <input type="hidden" name="form-name" value="contacto">
           <p style="display:none"><label>Si eres humano, deja esto vacío: <input name="bot-field"></label></p>
 
@@ -85,11 +89,11 @@
 
           <label class="checkbox">
             <input type="checkbox" name="acepta_privacidad" value="si" required>
-            <span>He leído y acepto la <a href="privacidad.html">política de privacidad</a> y autorizo el tratamiento de mis datos para gestionar mi consulta y el envío de información relacionada con mi solicitud.</span>
+            <span>He leído y acepto la <a href="/privacidad.html">política de privacidad</a> y autorizo el tratamiento de mis datos para gestionar mi consulta y el envío de información relacionada con mi solicitud.</span>
           </label>
 
           <button class="btn primary" type="submit">Enviar</button>
-          <p class="fine">Responsable: Casa Rural Carmen Luna. Finalidad: responder a tu consulta y gestionar reservas. Legitimación: consentimiento de la persona interesada. Destinatarios: no se ceden datos a terceros salvo obligación legal. Derechos: acceso, rectificación, supresión y otros en <a href="mailto:casaruralcarmenluna@gmail.com">casaruralcarmenluna@gmail.com</a>. Información adicional en la <a href="privacidad.html">política de privacidad</a>.</p>
+          <p class="fine">Responsable: Casa Rural Carmen Luna. Finalidad: responder a tu consulta y gestionar reservas. Legitimación: consentimiento de la persona interesada. Destinatarios: no se ceden datos a terceros salvo obligación legal. Derechos: acceso, rectificación, supresión y otros en <a href="mailto:casaruralcarmenluna@gmail.com">casaruralcarmenluna@gmail.com</a>. Información adicional en la <a href="/privacidad.html">política de privacidad</a>.</p>
           <p class="fine">Si lo prefieres, <a href="mailto:casaruralcarmenluna@gmail.com">escríbenos directamente a casaruralcarmenluna@gmail.com</a> o llámanos al <a href="tel:+34658814506">658&nbsp;814&nbsp;506</a>.</p>
         </form>
       </div>
@@ -153,12 +157,12 @@
     <div class="container">
       <p>© 2025 Casa Rural Carmen Luna. Todos los derechos reservados.</p>
       <nav aria-label="Información legal">
-        <a href="aviso-legal.html">Aviso legal</a>
-        <a href="privacidad.html">Privacidad</a>
-        <a href="cookies.html">Cookies</a>
+        <a href="/aviso-legal.html">Aviso legal</a>
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/cookies.html">Cookies</a>
       </nav>
     </div>
   </footer>
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>

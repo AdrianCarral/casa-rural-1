@@ -63,19 +63,46 @@ a{color:var(--lake); text-underline-offset:2px}
   background:rgba(255,255,255,.88);
   border-bottom:1px solid #eee;
 }
-.nav{display:flex; align-items:center; justify-content:space-between; height:68px}
+.nav{display:flex; align-items:center; justify-content:space-between; height:68px; position:relative}
 .brand{
   font-weight:800; text-decoration:none; letter-spacing:.2px;
   color:var(--pine);
   font-family:Lora,Georgia,serif;
 }
 nav{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+.nav-menu{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
 .nav-link{
   color:#3e423f; text-decoration:none; padding:8px 12px; border-radius:12px; transition:.2s;
 }
 .nav-link:hover{background:#f3f3f3}
 .nav-link.active{background:rgba(40,74,63,.12); color:var(--pine)}
 .nav .btn{margin-left:4px}
+
+.nav-toggle{
+  display:none;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid #dcdcdc;
+  background:#fff;
+  color:var(--pine);
+  cursor:pointer;
+  box-shadow:var(--inner);
+}
+.nav-toggle__text{font-weight:600; font-size:15px;}
+.nav-toggle:focus-visible{outline:3px solid #bcd; outline-offset:3px}
+.nav-toggle__bars{
+  position:relative;
+  display:block;
+  width:18px;
+  height:2px;
+  background:currentColor;
+  box-shadow:0 6px 0 currentColor, 0 -6px 0 currentColor;
+  transition:transform .2s ease;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bars{transform:rotate(90deg)}
 
 /* =Botones */
 .btn{
@@ -121,6 +148,14 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #bcd; outline-offset:2px}
 .hero h1{margin:0 0 .35rem}
 .hero p{max-width:62ch; margin:0 0 .8rem}
 .hero-ctas{display:flex; gap:12px}
+.hero-kicker{letter-spacing:.08em; text-transform:uppercase; font-size:12px; color:#355347; margin:0 0 .35rem; font-weight:600}
+
+.home-hero .hero-inner{min-height:72vh; padding:clamp(120px, 24vw, 260px) 0 clamp(48px, 11vw, 120px);}
+.home-hero .hero-panel{max-width:min(560px, 92%); background:rgba(255,255,255,.88); margin-left:clamp(0px, 6vw, 96px);}
+.home-hero.hero-image::before{background:
+    radial-gradient(1200px 440px at 12% 86%, rgba(255,255,255,.90), rgba(247,242,236,.70) 60%, transparent 100%),
+    linear-gradient(140deg, rgba(40,74,63,.08) 0%, rgba(40,74,63,.00) 60%);
+}
 
 /* =Hero secundario para páginas interiores */
 .page-hero{
@@ -201,6 +236,10 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #bcd; outline-offset:2px}
 .section.alt{background:var(--g-cream)}
 .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space)}
 .features .grid-3{margin:32px 0 48px}
+.wide-photo{padding:0; margin:0 0 56px;}
+.wide-photo__frame{margin:0;}
+.wide-photo img{width:100%; height:min(520px, 70vh); object-fit:cover; display:block; filter:saturate(1.02);}
+.wide-photo figcaption{padding:12px 18px; text-align:center; color:#2b312e; background:#f5f1ea;}
 .card{
   padding:18px; border:1px solid #e9e6e0; border-radius:var(--radius);
   background:#fff; box-shadow:var(--shadow);
@@ -445,9 +484,44 @@ body{
   h2{ font-size:clamp(20px, 5.6vw, 26px); }
   .section{ padding:28px 0 40px; }
 
-  /* Menú: que no se corte y sea cómodo de usar */
-  nav{ overflow-x:auto; -webkit-overflow-scrolling:touch; gap:6px; padding-bottom:6px; }
-  .nav-link, .nav .btn{ flex:0 0 auto; padding:12px 14px; font-size:16px; min-height:46px; border-radius:16px; }
+  /* Menú móvil compacto y desplegable */
+  .nav{ gap:10px; }
+  .nav-toggle{ display:flex; }
+  .nav-menu{
+    position:absolute;
+    top:calc(100% + 6px);
+    right:var(--space);
+    left:var(--space);
+    flex-direction:column;
+    gap:6px;
+    padding:12px;
+    background:#fff;
+    border:1px solid #e7e1d7;
+    border-radius:16px;
+    box-shadow:var(--shadow);
+    transform-origin:top;
+    transform:scaleY(0.9);
+    opacity:0;
+    pointer-events:none;
+    transition:transform .18s ease, opacity .18s ease;
+    max-height:70vh;
+    overflow-y:auto;
+  }
+  .nav-menu.is-open{
+    transform:scaleY(1);
+    opacity:1;
+    pointer-events:auto;
+  }
+  .nav-menu .nav-link,
+  .nav-menu .btn{
+    width:100%;
+    justify-content:flex-start;
+    text-align:left;
+    padding:12px 14px;
+    font-size:16px;
+    min-height:44px;
+    border-radius:14px;
+  }
 
   /* Hero menos alto y panel a todo ancho */
   .hero .hero-inner{ padding:42px 0 28px; min-height:auto; }
@@ -514,27 +588,14 @@ body{
     margin-right:6px;
   }
 
-  /* Menú: una sola fila desplazable, sin envolver */
-  .nav > nav{
-    display:flex;
-    flex-wrap:nowrap;           /* ¡clave! no hacer 2 filas */
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-    gap:6px;
-    scroll-snap-type:x proximity;
-  }
-  .nav > nav::-webkit-scrollbar{ display:none; } /* ocultar scrollbar iOS */
-
-  /* Pills más contenidos (44px de alto accesible) */
-  .nav-link,
-  .nav .btn{
-    flex:0 0 auto;
-    scroll-snap-align:center;
+  /* Menú en columna cuando se despliega */
+  .nav-menu{ box-shadow:var(--shadow); }
+  .nav-menu .nav-link,
+  .nav-menu .btn{
     min-height:44px;
-    padding:10px 12px;          /* antes más ancho */
-    border-radius:14px;
+    padding:11px 14px;
     font-size:15px;
-    line-height:1;
+    line-height:1.1;
   }
 
   /* Quitamos el efecto “pulse” para que no invada otros pills */

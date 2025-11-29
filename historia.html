@@ -13,26 +13,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
-  <link rel="stylesheet" href="assets/css/styles.css?v=3">
-  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=3">
+  <link rel="icon" href="/assets/img/favicon.ico">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html">Casa Rural</a>
-      <nav>
-        <a class="nav-link" href="index.html">Inicio</a>
-        <a class="nav-link" href="casa.html">La casa</a>
-        <a class="nav-link active" href="historia.html">Historia</a>
-        <a class="nav-link" href="entorno.html">Entorno</a>
-        <a class="nav-link" href="tarifas.html">Tarifas</a>
-        <a class="nav-link btn" href="contacto.html">Contacto</a>
+      <a class="brand" href="/">Casa Rural</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__text">Menú</span>
+      </button>
+      <nav class="nav-menu">
+        <a class="nav-link" href="/">Inicio</a>
+        <a class="nav-link" href="/casa.html">La casa</a>
+        <a class="nav-link active" href="/historia.html">Historia</a>
+        <a class="nav-link" href="/entorno.html">Entorno</a>
+        <a class="nav-link" href="/tarifas.html">Tarifas</a>
+        <a class="nav-link btn" href="/contacto/">Contacto</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="page-hero" style="--hero-bg:url('../img/paisaje-2.jpeg');">
+    <section class="page-hero" style="--hero-bg:url('/assets/img/paisaje-2.jpeg');">
       <div class="container">
         <h1>Historia de Miñera de Luna</h1>
         <p><strong>Casa Rural Carmen Luna</strong> se asienta en plena <strong>Reserva de la Biosfera de Omaña y Luna</strong>, en el precioso pueblo de <strong>Miñera de Luna</strong>, rodeado por el robledal de la Mata y los pintorescos <strong>sabinares de Luna</strong>.</p>
@@ -95,12 +99,12 @@
     <div class="container">
       <p>© 2025 Casa Rural Carmen Luna. Todos los derechos reservados.</p>
       <nav aria-label="Información legal">
-        <a href="aviso-legal.html">Aviso legal</a>
-        <a href="privacidad.html">Privacidad</a>
-        <a href="cookies.html">Cookies</a>
+        <a href="/aviso-legal.html">Aviso legal</a>
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/cookies.html">Cookies</a>
       </nav>
     </div>
   </footer>
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
