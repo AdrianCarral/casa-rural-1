@@ -126,8 +126,40 @@ function setupSectionGalleries() {
   });
 }
 
+function setupMobileNav() {
+  const header = document.querySelector('.site-header');
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-menu');
+  if (!header || !toggle || !menu) return;
+
+  header.classList.add('menu-ready');
+
+  const closeMenu = () => {
+    header.classList.remove('menu-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+
+  toggle.addEventListener('click', () => {
+    const isOpen = header.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  menu.addEventListener('click', (event) => {
+    if (event.target.closest('a') && window.matchMedia('(max-width: 768px)').matches) {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (!window.matchMedia('(max-width: 768px)').matches) {
+      closeMenu();
+    }
+  });
+}
+
 function init() {
   setupSectionGalleries();
+  setupMobileNav();
 }
 
 document.addEventListener('DOMContentLoaded', init);
