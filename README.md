@@ -9,7 +9,7 @@ Sitio estático con HTML/CSS/JS.
 Solo abre `index.html` en tu navegador. Para rutas relativas perfectas, usa una extensión de servidor local (ej. Live Server en VSCode).
 
 ## Estructura
-- index.html, casa.html, historia.html, entorno.html, tarifas.html, contacto.html
+- index.html, casa.html, historia.html, entorno.html, tarifas.html, contacto/index.html
 - assets/css/styles.css
 - assets/js/main.js, tarifas.js, gallery.js
 - assets/img/ (sube aquí tus fotos)

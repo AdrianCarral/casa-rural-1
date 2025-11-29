@@ -121,6 +121,14 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #bcd; outline-offset:2px}
 .hero h1{margin:0 0 .35rem}
 .hero p{max-width:62ch; margin:0 0 .8rem}
 .hero-ctas{display:flex; gap:12px}
+.hero-kicker{letter-spacing:.08em; text-transform:uppercase; font-size:12px; color:#355347; margin:0 0 .35rem; font-weight:600}
+
+.home-hero .hero-inner{min-height:72vh; padding:clamp(120px, 24vw, 260px) 0 clamp(48px, 11vw, 120px);}
+.home-hero .hero-panel{max-width:min(560px, 92%); background:rgba(255,255,255,.88); margin-left:clamp(0px, 6vw, 96px);}
+.home-hero.hero-image::before{background:
+    radial-gradient(1200px 440px at 12% 86%, rgba(255,255,255,.90), rgba(247,242,236,.70) 60%, transparent 100%),
+    linear-gradient(140deg, rgba(40,74,63,.08) 0%, rgba(40,74,63,.00) 60%);
+}
 
 /* =Hero secundario para páginas interiores */
 .page-hero{
@@ -201,6 +209,10 @@ a:focus-visible,.btn:focus-visible{outline:3px solid #bcd; outline-offset:2px}
 .section.alt{background:var(--g-cream)}
 .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space)}
 .features .grid-3{margin:32px 0 48px}
+.wide-photo{padding:0; margin:0 0 56px;}
+.wide-photo__frame{margin:0;}
+.wide-photo img{width:100%; height:min(520px, 70vh); object-fit:cover; display:block; filter:saturate(1.02);}
+.wide-photo figcaption{padding:12px 18px; text-align:center; color:#2b312e; background:#f5f1ea;}
 .card{
   padding:18px; border:1px solid #e9e6e0; border-radius:var(--radius);
   background:#fff; box-shadow:var(--shadow);
