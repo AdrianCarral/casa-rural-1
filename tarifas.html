@@ -25,15 +25,6 @@
     @media (max-width: 880px) {
       .tarifas-grid { grid-template-columns: 1fr; }
     }
-
-    /* Pequeños estilos inline para el calculador (no rompen tu CSS existente) */
-    .calc {
-      display:flex; flex-direction:column; gap:12px;
-    }
-    .calc-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-    .calc-row label { min-width:120px; }
-    .result { background:#fafafa; padding:12px; border-radius:8px; border:1px solid #e6e6e6; }
-    .note { font-size:0.95rem; color:#555; }
   </style>
 </head>
 <body>
@@ -45,6 +36,7 @@
         <span class="nav-toggle__text">Menú</span>
       </button>
       <nav class="nav-menu">
+      <nav>
         <a class="nav-link" href="/">Inicio</a>
         <a class="nav-link" href="/casa.html">La casa</a>
         <a class="nav-link" href="/historia.html">Historia</a>
@@ -62,14 +54,30 @@
 
     <!-- BLOQUE TARIFAS ORIENTATIVAS/CTA (AHORA 2 TARJETAS MÁS ANCHAS) -->
     <section class="section" aria-labelledby="consulta">
-      <h2 id="consulta">Tarifas orientativas</h2>
+      <h2 id="consulta">Tarifas sencillas</h2>
 
       <div class="tarifas-grid">
+
+        <div class="card">
+          <h3>Temporada Alta</h3>
+          <p><strong>Incluye:</strong> Semana Santa, julio y agosto, puentes nacionales y regionales en León, y Navidad.</p>
+          <ul>
+            <li>Puentes nacionales y regionales: estancia mínima de 3 noches.</li>
+            <li>Noches de domingo a jueves: <strong>210&nbsp;€/noche</strong> (mínimo 2 noches).</li>
+            <li>Fin de semana completo (entrada viernes, salida domingo — 2 noches): <strong>480&nbsp;€</strong> (precio por el par de noches).</li>
+            <li>Con reservas superiores a 4 noches se aplica un 10% de descuento.</li>
+          </ul>
+          <div class="price" style="margin-top:12px;">
+            <span>Ejemplo fin de semana (2 noches)</span>
+            <strong style="display:block; margin-top:8px;">480&nbsp;€</strong>
+          </div>
+        </div>
+
         <div class="card">
           <h3>Temporada Baja</h3>
           <p><strong>Ámbito:</strong> resto del año salvo los periodos indicados en 'Temporada alta'.</p>
           <ul>
-            <li>Noches de domingo a jueves: <strong>200&nbsp;€/noche</strong> (mínimo 2 noches) · <strong>máx 7 personas</strong>.</li>
+            <li>Noches de domingo a jueves: <strong>200&nbsp;€/noche</strong> (mínimo 2 noches).</li>
             <li>Fin de semana completo (entrada viernes, salida domingo — 2 noches): <strong>430&nbsp;€</strong> (precio por el par de noches).</li>
             <li>Con reservas superiores a 4 noches se aplica un 10% de descuento.</li>
           </ul>
@@ -78,96 +86,6 @@
             <strong style="display:block; margin-top:8px;">430&nbsp;€</strong>
           </div>
         </div>
-
-        <div class="card">
-          <h3>Temporada Alta</h3>
-          <p><strong>Incluye:</strong> Semana Santa, julio y agosto, puentes nacionales y regionales en León, y Navidad.</p>
-          <ul>
-            <li>Puentes nacionales y regionales: estancia mínima de 3 noches.</li>
-            <li>Noches de domingo a jueves: <strong>210&nbsp;€/noche</strong> (mínimo 2 noches).</li>
-            <li>Fin de semana (viernes/sábado): <strong>240&nbsp;€/noche</strong> (mínimo 2 noches).</li>
-            <li>Con reservas superiores a 4 noches se aplica un 10% de descuento.</li>
-          </ul>
-          <div class="price" style="margin-top:12px;">
-            <span>Ejemplo fin de semana (2 noches)</span>
-            <strong style="display:block; margin-top:8px;">480&nbsp;€ (2 × 240&nbsp;€)</strong>
-          </div>
-        </div>
-      </div>
-
-      <p class="fine" style="margin-top:16px;">Mejor precio garantizado en reserva directa. Respuesta rápida por WhatsApp, teléfono o email.</p>
-    </section>
-
-    <section class="section" aria-labelledby="calcula">
-      <h2 id="calcula">Cómo calcular tu estancia</h2>
-
-      <div class="grid-3">
-        <div class="card">
-          <h3>1. Elige tus fechas</h3>
-          <p>Selecciona fecha de entrada y fecha de salida. La calculadora requiere un mínimo de <strong>2 noches</strong>.</p>
-        </div>
-
-        <div class="card">
-          <h3>2. Usa nuestra calculadora</h3>
-          <div class="calc" id="tarifa-calculador">
-            <div class="calc-row">
-              <label for="start">Entrada</label>
-              <input id="start" type="date">
-            </div>
-            <div class="calc-row">
-              <label for="end">Salida</label>
-              <input id="end" type="date">
-            </div>
-            <div class="calc-row">
-              <label for="guests">Nº de personas</label>
-              <input id="guests" type="number" min="1" max="7" value="2">
-              <span class="note">Máx 7 personas.</span>
-            </div>
-
-            <div class="calc-row" style="align-items:flex-start;">
-              <label>Temporada</label>
-              <div>
-                <label><input type="radio" name="season" value="baja" checked> Temporada Baja</label><br>
-                <label><input type="radio" name="season" value="alta"> Temporada Alta (Julio/Agosto, Semana Santa, puentes, Navidad)</label>
-                <p class="note">Si tu reserva incluye días de Semana Santa/puentes/Navidad, marca "Temporada Alta".</p>
-              </div>
-            </div>
-
-            <div class="calc-row">
-              <button id="calcBtn" class="btn primary">Calcular precio</button>
-              <button id="clearBtn" class="btn ghost" type="button">Borrar</button>
-            </div>
-
-            <div id="calcResult" class="result" aria-live="polite" hidden></div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>3. Confirma con nosotros</h3>
-          <p>Tras calcular te enviaremos presupuesto final y condiciones de reserva.</p>
-        </div>
-      </div>
-
-      <p class="fine">Nota: las reglas anteriores se han actualizado para adaptar los importes y las condiciones. Si tienes dudas sobre si tus fechas pertenecen a Temporada Alta (p.ej. Semana Santa o puentes regionales), indícalo al reservar para aplicar la tarifa correcta.</p>
-    </section>
-
-    <section class="section" id="disponibilidad" aria-labelledby="disponibilidad-title">
-      <h2 id="disponibilidad-title">Calendario de disponibilidad</h2>
-      <p>Consulta aquí las fechas ocupadas. Para reservar, escríbenos desde <a class="more" href="/contacto/">Contacto</a>.</p>
-
-      <div class="card">
-        <iframe
-          class="calendar-embed"
-          src="https://calendar.google.com/calendar/embed?src=1b22e6b0b6b66a58e8ee31d36678e263ba672ad43d21ee81c1706d6dea9d43d4%40group.calendar.google.com&ctz=Europe%2FMadrid"
-          style="width:100%; border:0; height:640px; border-radius:14px;"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-
-      <div class="cta-row" style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap">
-        <a class="btn primary" href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noopener noreferrer">Abrir calendario</a>
-        <a class="btn ghost" href="/contacto/">Contactar para reservar</a>
       </div>
     </section>
 
@@ -233,155 +151,6 @@
       </nav>
     </div>
   </footer>
-
-  <script>
-    /* Calculador de tarifas: aplica las reglas descritas en la página.
-       Reglas aplicadas (resumen):
-       - Mínimo 2 noches para cualquier reserva.
-       - Temporada Baja:
-         - Noches dom–jue: 200 €/noche.
-         - Par viernes+sábado (fin de semana): 430 € por las 2 noches (si están presentes consecutivas).
-         - Si queda viernes o sábado suelto se aplica un importe por noche proporcional.
-       - Temporada Alta:
-         - Noches dom–jue: 210 €/noche.
-         - Noches viernes y sábado: 240 €/noche.
-       - Si el usuario selecciona "Temporada Alta" se aplican las tarifas de alta a todas las noches.
-    */
-    (function() {
-      const startEl = document.getElementById('start');
-      const endEl = document.getElementById('end');
-      const guestsEl = document.getElementById('guests');
-      const calcBtn = document.getElementById('calcBtn');
-      const clearBtn = document.getElementById('clearBtn');
-      const resultEl = document.getElementById('calcResult');
-
-      function parseDate(d) {
-        const parts = d.split('-');
-        return new Date(parts[0], parts[1]-1, parts[2]);
-      }
-
-      function diffDays(a,b) {
-        const msPerDay = 24 * 60 * 60 * 1000;
-        return Math.round((b - a) / msPerDay);
-      }
-
-      function iterateDates(start, nights) {
-        const arr = [];
-        for (let i=0;i<nights;i++) {
-          const d = new Date(start);
-          d.setDate(d.getDate() + i);
-          arr.push(d);
-        }
-        return arr;
-      }
-
-      function isFridaySaturdayPair(dates) {
-        for (let i=0;i<dates.length-1;i++) {
-          if (dates[i].getDay() === 5 && dates[i+1].getDay() === 6) return i;
-        }
-        return -1;
-      }
-
-      function formatEuro(v) {
-        return v.toLocaleString('es-ES', {style:'currency', currency:'EUR', minimumFractionDigits: 0});
-      }
-
-      calcBtn.addEventListener('click', function(e){
-        e.preventDefault();
-        resultEl.hidden = true;
-        resultEl.innerHTML = '';
-
-        const s = startEl.value;
-        const eDate = endEl.value;
-        if (!s || !eDate) {
-          resultEl.hidden = false;
-          resultEl.innerHTML = '<strong>Error:</strong> selecciona fecha de entrada y salida.';
-          return;
-        }
-        const start = parseDate(s);
-        const end = parseDate(eDate);
-        if (end <= start) {
-          resultEl.hidden = false;
-          resultEl.innerHTML = '<strong>Error:</strong> la fecha de salida debe ser posterior a la de entrada.';
-          return;
-        }
-
-        const nights = diffDays(start, end);
-        if (nights < 2) {
-          resultEl.hidden = false;
-          resultEl.innerHTML = '<strong>Error:</strong> la estancia mínima es de 2 noches.';
-          return;
-        }
-
-        const season = document.querySelector('input[name="season"]:checked').value;
-        const tarifs = {
-          baja: { weekday: 200, weekendPair: 430, weekendPerNight: 215 },
-          alta: { weekday: 210, weekendPerNight: 240 }
-        };
-
-        const dates = iterateDates(start, nights);
-        let total = 0;
-        let breakdown = [];
-
-        if (season === 'baja') {
-          const pairIndex = isFridaySaturdayPair(dates);
-          if (pairIndex !== -1) {
-            total += tarifs.baja.weekendPair;
-            breakdown.push({desc: 'Fin de semana (vie+sab) — tarifa fija (par)', nights:2, price: tarifs.baja.weekendPair});
-            dates.splice(pairIndex, 2);
-          }
-          dates.forEach(d => {
-            const day = d.getDay();
-            if (day === 5 || day === 6) {
-              const perNight = tarifs.baja.weekendPerNight;
-              total += perNight;
-              breakdown.push({desc: `Noche ${d.toLocaleDateString()} (vie/sab suelta)`, nights:1, price: perNight});
-            } else {
-              total += tarifs.baja.weekday;
-              breakdown.push({desc: `Noche ${d.toLocaleDateString()} (dom–jue)`, nights:1, price: tarifs.baja.weekday});
-            }
-          });
-        } else {
-          dates.forEach(d => {
-            const day = d.getDay();
-            if (day === 5 || day === 6) {
-              total += tarifs.alta.weekendPerNight;
-              breakdown.push({desc: `Noche ${d.toLocaleDateString()} (vie/sab)`, nights:1, price: tarifs.alta.weekendPerNight});
-            } else {
-              total += tarifs.alta.weekday;
-              breakdown.push({desc: `Noche ${d.toLocaleDateString()} (dom–jue)`, nights:1, price: tarifs.alta.weekday});
-            }
-          });
-        }
-
-        const deposit = 100;
-        const dueOnArrival = Math.max(0, total - deposit);
-
-        let html = `<strong>Resumen</strong><br>`;
-        html += `Fechas: <em>${start.toLocaleDateString()}</em> → <em>${end.toLocaleDateString()}</em> · <strong>${nights} noches</strong><br>`;
-        html += `Temporada: <strong>${season === 'baja' ? 'Baja' : 'Alta'}</strong><br>`;
-        html += `<ul>`;
-        breakdown.forEach(b => {
-          html += `<li>${b.desc} — ${formatEuro(b.price)}${b.nights>1 ? ' (por ' + b.nights + ' noches)' : ''}</li>`;
-        });
-        html += `</ul>`;
-        html += `<p class="note"><strong>Total estancia:</strong> ${formatEuro(total)}</p>`;
-        html += `<p class="note">Anticipo a pagar para reservar: <strong>${formatEuro(deposit)}</strong> (descontado del total). Cantidad restante a pagar el día de entrada: <strong>${formatEuro(dueOnArrival)}</strong>.</p>`;
-        resultEl.hidden = false;
-        resultEl.innerHTML = html;
-      });
-
-      clearBtn.addEventListener('click', function(){
-        startEl.value = '';
-        endEl.value = '';
-        guestsEl.value = 2;
-        document.querySelector('input[name="season"][value="baja"]').checked = true;
-        resultEl.hidden = true;
-        resultEl.innerHTML = '';
-      });
-    })();
-  </script>
-
   <script src="/assets/js/main.js"></script>
 </body>
 </html>

@@ -25,6 +25,8 @@
         <span class="nav-toggle__text">Menú</span>
       </button>
       <nav class="nav-menu">
+
+      <nav>
         <a class="nav-link" href="/">Inicio</a>
         <a class="nav-link active" href="/casa.html">La casa</a>
         <a class="nav-link" href="/historia.html">Historia</a>
@@ -357,16 +359,6 @@
     </section>
 
   </main>
-
-  <script type="module">
-    import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
-    const lightbox = new PhotoSwipeLightbox({
-      gallery: '#galeria-casa',
-      children: 'a',
-      pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.esm.min.js')
-    });
-    lightbox.init();
-  </script>
 
   <footer class="site-footer">
     <div class="container">
