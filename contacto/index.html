@@ -30,97 +30,55 @@
     </div>
   </header>
   
-  <main class="container section">
-    <h1>Contacto</h1>
-    <p>Cuéntanos tus fechas y cuántos sois. Te confirmamos <strong>disponibilidad y precio</strong> al momento.</p>
+  <main class="container section contact-page">
+    <header class="contact-hero">
+      <div>
+        <p class="kicker">Hablemos</p>
+        <h1>Reserva directa con nosotros</h1>
+        <p>Hemos simplificado el contacto: sin formularios ni cálculos. Cuéntanos tus fechas o cualquier duda por el canal que prefieras y te respondemos al momento.</p>
+      </div>
+      <div class="mountain-tag">
+        <span aria-hidden="true">⛰️</span>
+        <div>
+          <strong>Casa Rural en la montaña leonesa</strong>
+          <p class="muted" style="margin:4px 0 0">Junto al embalse de Luna, Miñera de Luna (León).</p>
+        </div>
+      </div>
+    </header>
 
-    <div class="grid-3">
-      <!-- FORMULARIO -->
-      <div class="card" style="grid-column: span 2;">
-        <h2 style="margin-top:0">Escríbenos</h2>
-        <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias/" accept-charset="UTF-8" class="booking">
-          <input type="hidden" name="form-name" value="contacto">
-          <p style="display:none"><label>Si eres humano, deja esto vacío: <input name="bot-field"></label></p>
-
-          <label>Nombre
-            <input type="text" name="nombre" autocomplete="name" required>
-          </label>
-          <label>Email
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-          <label>Teléfono
-            <input type="tel" name="telefono" inputmode="tel" autocomplete="tel">
-          </label>
-
-          <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:12px">
-            <label>Fecha de entrada
-              <input type="date" name="fecha_entrada">
-            </label>
-            <label>Fecha de salida
-              <input type="date" name="fecha_salida">
-            </label>
-          </div>
-
-          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px">
-            <label>Adultos
-              <input type="number" name="adultos" min="1" max="7" placeholder="2">
-            </label>
-            <label>Niños
-              <input type="number" name="ninos" min="0" max="6" placeholder="0">
-            </label>
-            <label>Motivo
-              <select name="motivo">
-                <option value="">Selecciona…</option>
-                <option>Escapada fin de semana</option>
-                <option>Semana completa</option>
-                <option>Puente / festivo</option>
-                <option>Otro</option>
-              </select>
-            </label>
-          </div>
-
-          <label>Mensaje
-            <textarea name="mensaje" rows="5" placeholder="Cuéntanos cualquier detalle (horarios, cunas, etc.)" required></textarea>
-          </label>
-
-          <label class="checkbox">
-            <input type="checkbox" name="acepta_privacidad" value="si" required>
-            <span>He leído y acepto la <a href="/privacidad.html">política de privacidad</a> y autorizo el tratamiento de mis datos para gestionar mi consulta y el envío de información relacionada con mi solicitud.</span>
-          </label>
-
-          <button class="btn primary" type="submit">Enviar</button>
-          <p class="fine">Responsable: Casa Rural Carmen Luna. Finalidad: responder a tu consulta y gestionar reservas. Legitimación: consentimiento de la persona interesada. Destinatarios: no se ceden datos a terceros salvo obligación legal. Derechos: acceso, rectificación, supresión y otros en <a href="mailto:casaruralcarmenluna@gmail.com">casaruralcarmenluna@gmail.com</a>. Información adicional en la <a href="/privacidad.html">política de privacidad</a>.</p>
-          <p class="fine">Si lo prefieres, <a href="mailto:casaruralcarmenluna@gmail.com">escríbenos directamente a casaruralcarmenluna@gmail.com</a> o llámanos al <a href="tel:+34658814506">658&nbsp;814&nbsp;506</a>.</p>
-        </form>
+    <div class="grid-3 contact-grid">
+      <div class="card highlight">
+        <h2 style="margin-top:0">Cómo contactarnos</h2>
+        <ul class="leaf-list" style="margin-bottom:1rem;">
+          <li>Escríbenos a <a href="mailto:casaruralcarmenluna@gmail.com">casaruralcarmenluna@gmail.com</a></li>
+          <li>Mensaje directo por WhatsApp: <a href="https://wa.me/34658814506" target="_blank" rel="noopener">658&nbsp;814&nbsp;506</a></li>
+          <li>Llámanos para confirmar fechas o resolver dudas: <a href="tel:+34658814506">658&nbsp;814&nbsp;506</a></li>
+        </ul>
+        <p><strong>¿Qué necesitamos?</strong><br>Fecha aproximada de entrada y salida, número de personas y si traéis peques o mascotas. Te damos el precio exacto y bloqueamos la reserva si te encaja.</p>
+        <p class="fine">Horario de atención: todos los días de 9:00 a 21:00 (hora peninsular).</p>
       </div>
 
-      <!-- INFORMACIÓN DE CONTACTO -->
-      <div class="card">
-        <h2 style="margin-top:0">Cómo contactar</h2>
-        <ul style="display:grid; gap:12px; padding-left:0; list-style:none;">
-          <li>
-            <strong>Dirección:</strong><br>
-            C, Diseminado, 18<br>
-             ,24147, León
-          </li>
-          <li>
-            <strong>Teléfono:</strong><br>
-            <a href="tel:+34658814506">658&nbsp;814&nbsp;506</a>
-          </li>
-          <li>
-            <strong>Email:</strong><br>
-            <a href="mailto:casaruralcarmenluna@gmail.com">casaruralcarmenluna@gmail.com</a>
-          </li>
-          <li>
-            <strong>Horario de atención:</strong><br>
-            Todos los días de 9:00 a 21:00 (hora peninsular)
-          </li>
-        </ul>
-        <p class="fine">Al contactar por email recibirás respuesta desde nuestra cuenta de Gmail.</p>
+      <div class="card contact-card">
+        <h2 style="margin-top:0">Dónde estamos</h2>
+        <p>Miñera de Luna, León.<br>Reserva de la Biosfera de Omaña y Luna.</p>
+        <p class="muted" style="margin-bottom:12px;">Te compartimos la ubicación exacta al reservar.</p>
+        <div class="cta-row" style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn primary" href="https://maps.app.goo.gl/unbkB8VmdZhevLoY6" target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>
+          <a class="btn ghost" href="/tarifas.html">Ver tarifas</a>
+        </div>
+      </div>
+
+      <div class="card mood-card">
+        <h2 style="margin-top:0">Ambiente rural</h2>
+        <p>Estamos al lado del embalse de Luna, rodeados de robles y sabinares. Un entorno de montaña sereno para descansar, caminar y disfrutar de la casa.</p>
+        <div class="little-landscape" aria-hidden="true">
+          <span class="peak"></span>
+          <span class="peak"></span>
+          <span class="sun"></span>
+        </div>
       </div>
     </div>
 
-    <!-- CÓMO LLEGAR -->
     <section class="section" id="como-llegar" aria-labelledby="como-llegar-title">
       <h2 id="como-llegar-title">Cómo llegar</h2>
       <div class="grid-3">
@@ -141,7 +99,7 @@
       <!-- Botones Google Maps -->
       <div class="cta-row" style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap">
         <a class="btn primary" href="https://maps.app.goo.gl/unbkB8VmdZhevLoY6" target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>
-        <a class="btn ghost" href="https://maps.app.goo.gl/unbkB8VmdZhevLoY6" target="_blank" rel="noopener noreferrer">Ir con GPS</a>
+        <a class="btn ghost" href="/contacto/">Contactar ahora</a>
       </div>
 
       <p class="fine">Destino: <strong>Miñera de Luna</strong> (Reserva de la Biosfera de Omaña y Luna). Te compartimos la ubicación exacta antes de la llegada.</p>
