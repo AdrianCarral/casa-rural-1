@@ -373,6 +373,9 @@ textarea{resize:vertical}
 .site-footer nav{display:flex; flex-wrap:wrap; gap:12px; font-size:.92rem}
 .site-footer nav a{color:inherit; text-decoration:none}
 .site-footer nav a:hover,.site-footer nav a:focus-visible{text-decoration:underline}
+.site-footer nav.social{align-items:center}
+.site-footer nav.social a{display:inline-flex; align-items:center; gap:6px}
+.site-footer nav.social svg{width:18px; height:18px; flex-shrink:0}
 .fine{color:#666; font-size:.92rem}
 
 /* =Utilidades de layout/tema */
